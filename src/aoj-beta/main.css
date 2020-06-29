@@ -1,0 +1,26 @@
+body {
+  margin: 0 40px;
+}
+
+#volumes {
+  border-bottom: 1px solid #ddd;
+}
+
+#volumes > li {
+  display: block;
+  padding: 10px 15px;
+
+  cursor: pointer;
+  color: #428bca;
+}
+
+#volumes > li:hover {
+  color: #2a6496;
+  text-decoration: underline;
+}
+
+#volumes > li.active {
+  color: #555;
+  border: 1px solid #ddd;
+  border-bottom-color: transparent;
+}

@@ -1,0 +1,8 @@
+*~
+.idea/*
+*.stackdump
+data.zip
+/wiki
+/owncloud
+/OFB
+/vendor/

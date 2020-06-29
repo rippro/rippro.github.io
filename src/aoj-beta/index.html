@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>AOJ進捗比較</title>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://code.highcharts.com/6.0.3/highcharts.js"></script>
+
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="./main.css" />
+  <script src="settings.js"></script>
+  <script src="main.js"></script>
+</head>
+
+<body>
+  <h1>AOJ進捗どうですか (beta)</h1>
+  <h2>その他のツール</h2>
+  <ul>
+    <li>
+      <a href="http://aoj-icpc.ichyo.jp/">AOJ-ICPC</a>
+    </li>
+    <li>
+      <a href="http://orisano.github.io/aoj_compare.html">AOJ watch tool</a>
+    </li>
+    <li>
+      <a href="http://minami.chu.jp/aoj/">AOJカテゴリー別問題集</a>
+    </li>
+    <li>
+      <a href="./rate.html">AOJレートどうですか</a>
+    </li>
+  </ul>
+
+  <h2>Daily Efforts</h2>
+  <div id="daily-efforts-loading">Loading...</div>
+  <div id="daily-efforts"></div>
+
+  <h2>Activities</h2>
+  <table class="table table-striped table-bordered table-hover text-center">
+    <thead>
+      <tr>
+        <th class="text-center">Rank</th>
+        <th class="text-center">ID</th>
+        <th class="text-center">Total</th>
+        <th class="text-center">Per day</th>
+        <th class="text-center">In a week</th>
+        <th class="text-center" colspan="40">Recent</th>
+      </tr>
+    </thead>
+    <tbody id="activities"></tbody>
+  </table>
+  <div id="activities-loading">Loading...</div>
+</body>
+
+</html>
