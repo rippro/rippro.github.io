@@ -4,6 +4,7 @@ body {
 	line-height: 1.5em;
 	font-family: sans-serif;
 }
+
 div#main {
 	width: 800px;
 	margin: 4px auto;
@@ -16,27 +17,32 @@ div#head {
 	padding: 2px 0px;
 	border-bottom: solid 2px #700;
 }
+
 div#head h1 {
 	color: #000;
 	margin-top: -8px;
 	margin-left: 16px;
 	margin-bottom: 0px;
 	padding-bottom: 16px;
-	font-size: 36pt;
+	font-size: 36px;
 	font-family: serif;
 }
+
 div#head h1 a:link {
-	color:#000;
-	text-decoration:none;
+	color: #000;
+	text-decoration: none;
 }
+
 div#head h1 a:hover {
-	color:#000;
-	text-decoration:underline;
+	color: #000;
+	text-decoration: underline;
 }
+
 div#head h1 a:visited {
-	color:#000;
-	text-decoration:none;
+	color: #000;
+	text-decoration: none;
 }
+
 div#head div#tagline {
 	font-size: 8pt;
 	text-align: right;
@@ -50,6 +56,7 @@ div#article {
 	width: 630px;
 	float: right;
 }
+
 div#breadcrumbs {
 	margin-left: 16px;
 	margin-top: 0px;
@@ -57,27 +64,33 @@ div#breadcrumbs {
 	font-size: 10pt;
 	padding: 0px;
 }
+
 div#article div.section {
 	margin-left: 8px;
 	padding: 2px;
 	font-size: 11pt;
 }
+
 div#article div.section h2 {
 	margin: 24px 0px;
 	padding-left: 4px;
 	border-bottom: 1px solid #700;
 	border-left: 8px solid #700;
 }
+
 div#article div.section h3 {
 	margin: 16px 0px;
 	border-bottom: 1px dashed #08f;
 }
+
 div#article div.section ul {
 	margin: 4px;
 }
+
 div#article dt {
-	font-weight:bold;
+	font-weight: bold;
 }
+
 div.detail {
 	text-align: right;
 	margin: 8px 16px;
@@ -90,7 +103,7 @@ div#navi {
 }
 
 #navi a {
-	display:block
+	display: block
 }
 
 div.navibutton {
@@ -103,6 +116,7 @@ div.navibutton {
 	border-bottom: solid 4px #444;
 	border-right: solid 4px #666;
 }
+
 div.navibutton:hover {
 	margin: 8px 0px;
 	padding: 2px 0px;
@@ -113,18 +127,21 @@ div.navibutton:hover {
 	border-bottom: solid 4px #ddd;
 	border-right: solid 4px #aaa;
 }
+
 div.navibutton a:link {
 	color: #fff
 }
+
 div.navibutton a:hover {
 	color: #fff
 }
+
 div.navibutton a:visited {
 	color: #fff
 }
 
 div#footer {
-	clear:both;
+	clear: both;
 	color: #fff;
 	background: #700;
 	text-align: center;
