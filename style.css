@@ -1,5 +1,5 @@
 body {
-	background: url("./images/body_back.png");
+	background: #c0c0c0;
 	overflow-y: scroll;
 	line-height: 1.5em;
 	font-family: sans-serif;
@@ -74,13 +74,15 @@ div#article div.section {
 div#article div.section h2 {
 	margin: 24px 0px;
 	padding-left: 4px;
-	border-bottom: 1px solid #700;
-	border-left: 8px solid #700;
+	padding: 0.5em;
+	color: #000;
+	background: #cdf0fd;
+	border-left: solid 5px #6CBAD8;
 }
 
 div#article div.section h3 {
 	margin: 16px 0px;
-	border-bottom: 1px dashed #08f;
+	border-bottom: 1px dashed #6CBAD8;
 }
 
 div#article div.section ul {
@@ -109,7 +111,7 @@ div#navi {
 div.navibutton {
 	margin: 8px 0px;
 	padding: 2px 0px;
-	background-color: #707070;
+	background-color: #8E8E8E;
 	text-align: center;
 	border-top: solid 4px #ddd;
 	border-left: solid 4px #aaa;
