@@ -1,7 +1,7 @@
 /** @format */
 
 import { VFC } from "react";
-import { useRouter } from "next/router";
+import { NextRouter, useRouter } from "next/router";
 import { Layout } from "../../components/Layout";
 import { Events, EventDetails } from "../../components/EventList";
 
@@ -21,8 +21,7 @@ const Link: Function = (title: string, link: string) => {
   }
 };
 
-const getContestId = (): string => {
-  const router = useRouter();
+const getContestId = (router: NextRouter): string => {
   const contestId = Array.isArray(router.query.contest)
     ? router.query.contest[0]
     : router.query.contest || Events[0].id;
@@ -30,7 +29,8 @@ const getContestId = (): string => {
 };
 
 const EventDetail: VFC = () => {
-  const contestId: string = getContestId();
+  const router = useRouter();
+  const contestId: string = getContestId(router);
   return (
     <Layout
       title={`${EventDetails[contestId].title} - RiPPro(立命館大学情報理工学部プロジェクト団体)`}
