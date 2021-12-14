@@ -2,9 +2,9 @@
 
 import { FC } from "react";
 
-// import { Footer } from "./Footer";
 // import Menubar from "./MenuBar";
 import Header from "./Header";
+import Footer from "./Footer";
 import Head from "./Head";
 
 // import styles from "./Layout.module.css";
@@ -21,6 +21,6 @@ export const Layout: FC<{
     <Head />
     {/* <main className={styles.main}> */}
     <main>{children}</main>
-    {/* <Footer home={home} /> */}
+    <Footer />
   </div>
 );
