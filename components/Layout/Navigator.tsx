@@ -1,6 +1,7 @@
 /** @format */
 
 import { VFC } from "react";
+import Link from "next/link";
 
 import styles from "./Navigator.module.css";
 
@@ -8,21 +9,19 @@ const Navigator: VFC = () => {
   return (
     <div className={styles.navi}>
       <div className={styles.navibutton}>
-        <a href="/index.html">Top</a>
+        <Link href="/">Top</Link>
       </div>
       <div className={styles.navibutton}>
-        <a href="/event/index.html">Event</a>
+        <Link href="/event">Event</Link>
       </div>
       <div className={styles.navibutton}>
-        <a href="/contact.html">Contact</a>
+        <Link href="/contact">Contact</Link>
       </div>
       <div className={styles.navibutton}>
-        <a href="/link.html">Link</a>
+        <Link href="/link">Link</Link>
       </div>
       <div className={styles.navibutton}>
-        <a href="/welcome/index.html">
-          <b>新歓情報</b>
-        </a>
+        <Link href="/welcome">新歓情報</Link>
       </div>
     </div>
   );
