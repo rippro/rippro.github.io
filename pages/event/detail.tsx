@@ -1,9 +1,9 @@
 /** @format */
 
 import { VFC } from "react";
-import Link from "next/link";
+import { useRouter } from "next/router";
 import { Layout } from "../../components/Layout";
-import { EventDetails } from "../../components/EventList";
+import { Events, EventDetails } from "../../components/EventList";
 
 import styles from "../../components/section.module.css";
 import detailsStyle from "../../styles/details.module.css";
@@ -13,8 +13,24 @@ const extension: Function = (filename: string) => {
   return parts[parts.length - 1];
 };
 
+const Link: Function = (title: string, link: string) => {
+  if (link) {
+    return <a href={link}>{title}</a>;
+  } else {
+    return <>{title}</>;
+  }
+};
+
+const getContestId = (): string => {
+  const router = useRouter();
+  const contestId = Array.isArray(router.query.contest)
+    ? router.query.contest[0]
+    : router.query.contest || Events[0].id;
+  return contestId;
+};
+
 const EventDetail: VFC = () => {
-  const contestId = "acpc2018";
+  const contestId: string = getContestId();
   return (
     <Layout
       title={`${EventDetails[contestId].title} - RiPPro(立命館大学情報理工学部プロジェクト団体)`}
@@ -37,7 +53,7 @@ const EventDetail: VFC = () => {
             {EventDetails[contestId].problemSet.map((college) => {
               return (
                 <li key={college.college}>
-                  <a href={college.link}>{college.college}</a>
+                  {Link(college.college, college.link)}
                 </li>
               );
             })}
