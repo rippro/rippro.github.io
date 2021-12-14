@@ -6,16 +6,14 @@ import { SectionType, LinksType, sections } from "../components/Links";
 
 import styles from "../components/section.module.css";
 
-
-
 const LinkSection: VFC<SectionType> = (Props: SectionType): JSX.Element => {
   return (
     <>
       <h3>{Props.title}</h3>
       <ul>
-        {Props.contents.map((linkItem:LinksType) => {
+        {Props.contents.map((linkItem: LinksType) => {
           return (
-            <li>
+            <li key={linkItem.title}>
               <a href={linkItem.link} target="_blank" rel="noopener noreferrer">
                 {linkItem.title}
               </a>
@@ -36,7 +34,7 @@ const Links: VFC = () => {
       <div className={styles.section}>
         <h2>リンク</h2>
         {sections.map((section: SectionType) => {
-          return <LinkSection {...section} />;
+          return <LinkSection {...section} key={section.title} />;
         })}
       </div>
     </Layout>
