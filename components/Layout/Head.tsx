@@ -2,7 +2,6 @@
 
 import { VFC } from "react";
 import Link from "next/link";
-import Image from "next/image";
 
 import styles from "./Head.module.css";
 
@@ -17,7 +16,7 @@ const Header: VFC = () => {
       <h1>
         <Link href="/">
           <a>
-            <Image
+            <img
               src="/rippro-rogo.png"
               alt="rippro-rogo"
               width={202}
