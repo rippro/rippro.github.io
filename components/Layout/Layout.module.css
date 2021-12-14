@@ -1,5 +1,19 @@
 /** @format */
 
+.body {
+  background: #808080;
+  overflow-y: scroll;
+  line-height: 1.5em;
+  font-family: sans-serif;
+}
+
+.main {
+  width: 800px;
+  margin: 4px auto;
+  border: solid 2px #700;
+  background-color: #fff;
+}
+
 .article {
   margin-top: 8px;
   margin-left: 16px;

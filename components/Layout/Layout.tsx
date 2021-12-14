@@ -15,11 +15,13 @@ export const Layout: FC<{
   title?: string;
   description?: string;
 }> = ({ children, headerChild, title, description }) => (
-  <div>
+  <div className={styles.body}>
     <Header title={title} description={description} />
-    <Head />
-    <div className={styles.article}>{children}</div>
-    <Navigator />
-    <Footer />
+    <div className={styles.main}>
+      <Head />
+      <div className={styles.article}>{children}</div>
+      <Navigator />
+      <Footer />
+    </div>
   </div>
 );
