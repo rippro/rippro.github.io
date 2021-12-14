@@ -18,7 +18,7 @@ const Header: React.FC<Props> = ({ title, description }: Props) => {
         name="description"
         content={description ? description : defaultDescription}
       />
-      <link rel="icon" href="/research/favicon.ico" />
+      <link rel="icon" href="/favicon.ico" />
       <meta name="og:title" content={title} />
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary_large_image" />

@@ -6,21 +6,20 @@ import { FC } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Head from "./Head";
+import Navigator from "./Navigator";
 
-// import styles from "./Layout.module.css";
+import styles from "./Layout.module.css";
 
 export const Layout: FC<{
   headerChild?: JSX.Element;
-  home?: boolean;
   title?: string;
   description?: string;
-}> = ({ children, headerChild, home, title, description }) => (
+}> = ({ children, headerChild, title, description }) => (
   <div>
-    {/* <Menubar>{headerChild}</Menubar>*/}
-    <Header title={title} description={description} /> 
+    <Header title={title} description={description} />
     <Head />
-    {/* <main className={styles.main}> */}
-    <main>{children}</main>
+    <div className={styles.article}>{children}</div>
+    <Navigator />
     <Footer />
   </div>
 );
