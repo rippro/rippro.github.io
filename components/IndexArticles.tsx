@@ -32,7 +32,7 @@ const IndexArticles: VFC = () => {
         </p>
         <h3>ACM-ICPC</h3>
         <p>
-          <a href="https://icpc.iisf.or.jp/" target="_blank" rel="noopener">
+          <a href="https://icpc.iisf.or.jp/" target="_blank" rel="noopener noreferrer">
             ACM-ICPC
           </a>{" "}
           とは国際学会の主催する歴史あるプログラミングコンテストです。
@@ -45,7 +45,7 @@ const IndexArticles: VFC = () => {
             <dt> RiPPro </dt>
             <dd>プログラミングコンテストを主目的とする団体です。</dd>
             <dt>
-              <a href="http://rione.org/" target="_blank" rel="noopener">
+              <a href="http://rione.org/" target="_blank" rel="noopener noreferrer">
                 {" "}
                 Ri-one{" "}
               </a>
@@ -55,7 +55,7 @@ const IndexArticles: VFC = () => {
               <a
                 href="https://rigpp.sakura.ne.jp/wp/"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
               >
                 {" "}
                 RiG++{" "}
@@ -63,7 +63,7 @@ const IndexArticles: VFC = () => {
             </dt>
             <dd>ゲームとCGの作成を主目的としている団体です。</dd>
             <dt>
-              <a href="https://risec.github.io/" target="_blank" rel="noopener">
+              <a href="https://risec.github.io/" target="_blank" rel="noopener noreferrer">
                 {" "}
                 RiST{" "}
               </a>
