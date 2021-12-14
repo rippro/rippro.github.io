@@ -7,7 +7,7 @@ import YouTube from "react-youtube";
 import styles from "../components/section.module.css";
 import welcomeStyles from "../styles/welcome.module.css";
 
-const Contact: VFC = () => {
+const Welcome: VFC = () => {
   const currentDate = new Date();
 
   const courseDateStart = new Date(`${currentDate.getFullYear()}/5/11`);
@@ -20,8 +20,8 @@ const Contact: VFC = () => {
     courseDateStart < currentDate && currentDate < courseDateEnd;
   return (
     <Layout
-      title="Links - RiPPro(立命館大学情報理工学部プロジェクト団体)"
-      description="他サイトへのリンクを記載したページ"
+      title="Welcome - RiPPro(立命館大学情報理工学部プロジェクト団体)"
+      description="新歓用ページ"
     >
       <div className={`${styles.section} ${welcomeStyles.line}`}>
         <h2>プログラミング(C++)講習会</h2>
@@ -135,4 +135,4 @@ const Contact: VFC = () => {
   );
 };
 
-export default Contact;
+export default Welcome;
