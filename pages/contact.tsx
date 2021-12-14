@@ -9,8 +9,8 @@ import styles from "../components/section.module.css";
 const Contact: VFC = () => {
   return (
     <Layout
-      title="Links - RiPPro(立命館大学情報理工学部プロジェクト団体)"
-      description="他サイトへのリンクを記載したページ"
+      title="Contact - RiPPro(立命館大学情報理工学部プロジェクト団体)"
+      description="RiPProへのコンタクトページ"
     >
       <div className={styles.section}>
         <h2>Contact</h2>
