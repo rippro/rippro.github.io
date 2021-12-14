@@ -7,8 +7,6 @@ interface Props {
   description?: string;
 }
 
-export const siteTitle = "xryuseix Sample Website";
-
 const Header: React.FC<Props> = ({ title, description }: Props) => {
   const defaultDescription =
     '立命館大学情報理工学部プロジェクト団体 競技プログラミング部門「RiPPro」です。ACM-ICPC (プログラミングの学生世界大会) などの大会で入賞することを目的として活動しています。';
