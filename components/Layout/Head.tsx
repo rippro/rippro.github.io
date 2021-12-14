@@ -14,14 +14,16 @@ const Header: VFC = () => {
         <br /> Programming Contest Project Team, Ritsumeikan University Faculty
         of Information Science and Engineering
       </div>
-      <h1 >
-        <Link href="/" passHref >
-          <Image
-            src="/rippro-rogo.png"
-            alt="rippro-rogo"
-            width={202}
-            height={62}
-          />
+      <h1>
+        <Link href="/">
+          <a>
+            <Image
+              src="/rippro-rogo.png"
+              alt="rippro-rogo"
+              width={202}
+              height={62}
+            />
+          </a>
         </Link>
       </h1>
     </div>
