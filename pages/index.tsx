@@ -2,6 +2,7 @@
 
 import type { NextPage } from "next";
 import { Layout } from "../components/Layout";
+import Twitter from "../components/Twitter";
 
 const Home: NextPage = () => {
   return (
@@ -13,6 +14,7 @@ const Home: NextPage = () => {
       <div>
         <h1>ようこそ RiPPro へ</h1>
       </div>
+      <Twitter />
     </Layout>
   );
 };
