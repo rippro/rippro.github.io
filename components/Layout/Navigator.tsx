@@ -18,7 +18,7 @@ const Navigator: VFC = () => {
         <Link href="/contact">Contact</Link>
       </div>
       <div className={styles.navibutton}>
-        <Link href="/link">Link</Link>
+        <Link href="/links">Links</Link>
       </div>
       <div className={styles.navibutton}>
         <Link href="/welcome">新歓情報</Link>
