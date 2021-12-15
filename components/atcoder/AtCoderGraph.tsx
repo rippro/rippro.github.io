@@ -1,7 +1,6 @@
 /** @format */
 
 import React from "react";
-import { users } from "./settings";
 import styles from "./AtCoderGraph.module.css";
 
 import Highcharts from "highcharts";
@@ -12,6 +11,7 @@ type Props = {};
 
 type State = {
   usersInfo: userInfoType[];
+  userIDs: string[];
 };
 
 type userInfoType = {
@@ -20,17 +20,23 @@ type userInfoType = {
 };
 
 class AtCoderGraph extends React.Component<{}, State> {
-  users: string[];
   constructor(props: Props) {
     super(props);
     this.state = {
       usersInfo: [],
+      userIDs: [],
     };
-    this.users = users;
-    this.getUserInfo();
+    this.getUserIDs();
   }
+  getUserIDs = () => {
+    const url =
+      "https://script.google.com/macros/s/AKfycbzOHe3hCcTYfAryVryiFmxXffXBPCI12Uk02psY0s_6leS4ukwxd2eE_c-BXNb80nvW/exec";
+    this.request(url).then((data: any) => {
+      this.setState({ userIDs: data as string[] });
+    });
+  };
   getUserInfo = () => {
-    this.users.forEach((user) => {
+    this.state.userIDs.forEach((user) => {
       this.getACCount(user);
     });
   };
@@ -112,6 +118,7 @@ class AtCoderGraph extends React.Component<{}, State> {
   };
 
   render() {
+    this.getUserInfo();
     return <div className={`${styles.body}`}>{<this.RenderSummary />}</div>;
   }
 }
