@@ -18,8 +18,6 @@ const AtCoderPage: VFC = () => {
           style={{
             height: "500px",
             display: "block",
-            margin: 0,
-            padding: 0,
           }}
         >
           <AtCoderGraph />
