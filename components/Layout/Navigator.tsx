@@ -12,6 +12,11 @@ const Navigator: VFC = () => {
         <Link href="/">Top</Link>
       </div>
       <div className={styles.navibutton}>
+        <b>
+          <Link href="/welcome">新歓情報</Link>
+        </b>
+      </div>
+      <div className={styles.navibutton}>
         <Link href="/event">Event</Link>
       </div>
       <div className={styles.navibutton}>
@@ -21,7 +26,7 @@ const Navigator: VFC = () => {
         <Link href="/links">Links</Link>
       </div>
       <div className={styles.navibutton}>
-        <Link href="/welcome">新歓情報</Link>
+        <Link href="/menbers">部員向け</Link>
       </div>
     </div>
   );

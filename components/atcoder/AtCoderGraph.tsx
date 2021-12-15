@@ -61,7 +61,11 @@ class AtCoderGraph extends React.Component<{}, State> {
     }
   };
   request = (url: string) => {
-    return fetch(url).then((res) => res.json());
+    return fetch(url)
+      .then((res) => res.json())
+      .catch((error) => {
+        console.error("Fetch Error:", error);
+      });
   };
   RenderSummary: React.VFC = (): JSX.Element => {
     if (typeof Highcharts === "object") {

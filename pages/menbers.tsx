@@ -8,8 +8,8 @@ import styles from "../components/section.module.css";
 const AtCoderPage: VFC = () => {
   return (
     <Layout
-      title="AtCoder進捗比較- RiPPro(立命館大学情報理工学部プロジェクト団体)"
-      description="RiPProへのコンタクトページ"
+      title="部員向けページ - RiPPro(立命館大学情報理工学部プロジェクト団体)"
+      description="部員向けページ"
     >
       <div className={styles.section}>
         <h2>AtCoder進捗どうですか</h2>

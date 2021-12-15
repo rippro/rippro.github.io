@@ -5,17 +5,6 @@ export interface LinksType {
   link: string;
 }
 
-const forMenbers: LinksType[] = [
-  {
-    title: "Aizu Online Judge 進捗",
-    link: "./aoj",
-  },
-  {
-    title: "AtCoder 進捗",
-    link: "./atcoder",
-  },
-];
-
 const ACMICPC: LinksType[] = [
   {
     title: "ACM-ICPC",
@@ -84,7 +73,6 @@ export interface SectionType {
 }
 
 export const sections: SectionType[] = [
-  { title: "部員向け", contents: forMenbers },
   { title: "ACM-ICPC", contents: ACMICPC },
   { title: "情報理工学部プロジェクト連合", contents: InfoProjectClubs },
   { title: "立命館大学", contents: ritsumeikan },
