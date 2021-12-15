@@ -415,8 +415,10 @@ export const EventDetails: EventDetailsType = {
         </thead>
         <tbody>
           <tr className={detailsStyle.tr}>
-            <th className={detailsStyle.th} rowSpan={5}>Day 1</th>
-            <td className={detailsStyle.td}>13:00-14:00</td>
+            <th className={detailsStyle.th} rowSpan={5}>
+              Day 1
+            </th>
+            <td className={detailsStyle.td}>13:00 - 14:00</td>
             <td className={detailsStyle.td}>集合，開会，自己紹介など</td>
           </tr>
           <tr className={detailsStyle.tr}>
@@ -436,7 +438,9 @@ export const EventDetails: EventDetailsType = {
             <td className={detailsStyle.td}>懇親会</td>
           </tr>
           <tr className={detailsStyle.tr}>
-            <th className={detailsStyle.th} rowSpan={4}>Day 2</th>
+            <th className={detailsStyle.th} rowSpan={4}>
+              Day 2
+            </th>
             <td className={detailsStyle.td}>10:00 - 11:00</td>
             <td className={detailsStyle.td}>集合・チーム編成</td>
           </tr>
@@ -453,7 +457,9 @@ export const EventDetails: EventDetailsType = {
             <td className={detailsStyle.td}>懇親会</td>
           </tr>
           <tr className={detailsStyle.tr}>
-            <th className={detailsStyle.th} rowSpan={3}>Day 3</th>
+            <th className={detailsStyle.th} rowSpan={3}>
+              Day 3
+            </th>
             <td className={detailsStyle.td}>09:00 - 10:00</td>
             <td className={detailsStyle.td}>集合・チーム編成</td>
           </tr>
@@ -476,6 +482,7 @@ export const EventDetails: EventDetailsType = {
       begin: "2013/3/11",
       end: "2013/3/13",
     },
+    detailURL: "http://kokucheese.com/event/index/72089",
     problemSet: [
       { college: "Day1(会津大学)", link: "" },
       { college: "Day2(大阪大学)", link: "" },
@@ -503,8 +510,10 @@ export const EventDetails: EventDetailsType = {
         </thead>
         <tbody>
           <tr className={detailsStyle.tr}>
-            <th className={detailsStyle.th} rowSpan={5}>Day 1</th>
-            <td className={detailsStyle.td}>13:00-14:00</td>
+            <th className={detailsStyle.th} rowSpan={5}>
+              Day 1
+            </th>
+            <td className={detailsStyle.td}>13:00 - 14:00</td>
             <td className={detailsStyle.td}>集合，開会，自己紹介など</td>
           </tr>
           <tr className={detailsStyle.tr}>
@@ -524,7 +533,9 @@ export const EventDetails: EventDetailsType = {
             <td className={detailsStyle.td}>懇親会</td>
           </tr>
           <tr className={detailsStyle.tr}>
-            <th className={detailsStyle.th} rowSpan={3}>Day 2</th>
+            <th className={detailsStyle.th} rowSpan={3}>
+              Day 2
+            </th>
             <td className={detailsStyle.td}>10:00 - 11:00</td>
             <td className={detailsStyle.td}>集合・チーム編成</td>
           </tr>
@@ -537,7 +548,9 @@ export const EventDetails: EventDetailsType = {
             <td className={detailsStyle.td}>問題解説</td>
           </tr>
           <tr className={detailsStyle.tr}>
-            <th className={detailsStyle.th} rowSpan={3}>Day 3</th>
+            <th className={detailsStyle.th} rowSpan={3}>
+              Day 3
+            </th>
             <td className={detailsStyle.td}>09:00 - 10:00</td>
             <td className={detailsStyle.td}>集合・チーム編成</td>
           </tr>
@@ -589,19 +602,19 @@ export const EventDetails: EventDetailsType = {
       { college: "Day3(立命館大学)", link: "" },
     ],
     commentary: [
-      { title: "A: Chicken or the Egg", link: "kohyo.pdf" },
-      { title: "B: Unequal Dice", link: "A.pdf" },
-      { title: "C: Lucky Dip", link: "B.pdf" },
-      { title: "D: Memory Leak", link: "C.pdf" },
-      { title: "E: Elevator", link: "D.pdf" },
-      { title: "F: Icy Composer", link: "E.pdf" },
-      { title: "G: Satan Attacks", link: "F.pdf" },
+      { title: "A: Chicken or the Egg", link: "kohyo.pptx" },
+      { title: "B: Unequal Dice", link: "A.pptx" },
+      { title: "C: Lucky Dip", link: "B.pptx" },
+      { title: "D: Memory Leak", link: "C.pptx" },
+      { title: "E: Elevator", link: "D.pptx" },
+      { title: "F: Icy Composer", link: "E.pptx" },
+      { title: "G: Satan Attacks", link: "F.pptx" },
     ],
   },
   rupc2011: {
     title: "立命館プログラミングコンテスト2011",
     date: {
-      begin: "2011/10/15/",
+      begin: "2011/10/15",
       end: "",
     },
     judge: "http://judge.u-aizu.ac.jp/onlinejudge/index.jsp",

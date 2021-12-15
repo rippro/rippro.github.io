@@ -51,7 +51,7 @@ const PlaceElement: VFC<PlaceProps> = (Props: PlaceProps) => {
   if (Props.place) {
     return (
       <>
-        <h3>イベント概要</h3>
+        <h3>会場</h3>
         <p>{Props.place}</p>
       </>
     );
@@ -92,6 +92,72 @@ const ScheduleElement: VFC<ScheduleProps> = (Props: ScheduleProps) => {
   }
 };
 
+type EventDetailProps = {
+  detailURL?: string | null | undefined;
+};
+const EventDetailElement: VFC<EventDetailProps> = (Props: EventDetailProps) => {
+  if (Props.detailURL) {
+    return (
+      <>
+        <h3>イベント概要</h3>
+        <a href={Props.detailURL}>{Props.detailURL}</a>
+      </>
+    );
+  } else {
+    return <></>;
+  }
+};
+
+type JudgeSiteProps = {
+  judgeURL?: string | null | undefined;
+};
+const JudgeSiteElement: VFC<JudgeSiteProps> = (Props: JudgeSiteProps) => {
+  if (Props.judgeURL) {
+    return (
+      <>
+        <h3>ジャッジシステム</h3>
+        <a href={Props.judgeURL}>{Props.judgeURL}</a>
+      </>
+    );
+  } else {
+    return <></>;
+  }
+};
+
+type EventDateProps = {
+  begin: string;
+  end?: string | null | undefined;
+};
+const EventDateElement: VFC<EventDateProps> = (Props: EventDateProps) => {
+  return (
+    <>
+      <h3>開催日時</h3>
+      {Props.begin}
+      {Props.end ? ` - ${Props.end}` : ""}
+    </>
+  );
+};
+
+type WriterProps = {
+  writer?: string[] | null | undefined;
+};
+const WriterElement: VFC<WriterProps> = (Props: WriterProps) => {
+  if (Props.writer) {
+    return (
+      <>
+        <h3>問題作成・ジャッジ</h3>
+        <ul>
+          {Props.writer.map((writer: string) => {
+            return <li key={writer}>{writer}</li>;
+          })}
+        </ul>
+      </>
+    );
+  } else {
+    return <></>;
+  }
+};
+
 const EventDetail: VFC = () => {
   const router = useRouter();
   const contestId: string = getContestId(router);
@@ -106,15 +172,12 @@ const EventDetail: VFC = () => {
           contestId={contestId}
           link={EventDetails[contestId].picture}
         />
-        <h3>開催日時</h3>
-        {EventDetails[contestId].date.begin} -{" "}
-        {EventDetails[contestId].date.end}
-        <div>
-          <h3>イベント概要</h3>
-          <a href={EventDetails[contestId].detailURL}>
-            {EventDetails[contestId].detailURL}
-          </a>
-        </div>
+        <EventDateElement
+          begin={EventDetails[contestId].date.begin}
+          end={EventDetails[contestId].date.end}
+        />
+        <JudgeSiteElement judgeURL={EventDetails[contestId].judge} />
+        <EventDetailElement detailURL={EventDetails[contestId].detailURL} />
         <PlaceElement place={EventDetails[contestId].place} />
         <div>
           <h3>問題セット</h3>
@@ -151,6 +214,7 @@ const EventDetail: VFC = () => {
         </div>
         <IODataElement iodata={EventDetails[contestId].iodata} />
         <ScheduleElement schedule={EventDetails[contestId].schedule} />
+        <WriterElement writer={EventDetails[contestId].writer} />
       </div>
     </Layout>
   );
