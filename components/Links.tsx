@@ -8,11 +8,11 @@ export interface LinksType {
 const forMenbers: LinksType[] = [
   {
     title: "Aizu Online Judge 進捗",
-    link: "./aoj-beta",
+    link: "./aoj",
   },
   {
     title: "AtCoder 進捗",
-    link: "./atcoder/index.html",
+    link: "./atcoder",
   },
 ];
 
