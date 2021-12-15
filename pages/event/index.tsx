@@ -22,7 +22,7 @@ const Event: VFC = () => {
             </h2>
             {event.detail}
             <div className={eventStyles.detail}>
-              <Link href={`event/detail?contest=${event.id}`}>詳細はこちら</Link>
+              <Link href={`event/${event.id}`}>詳細はこちら</Link>
             </div>
           </div>
         );

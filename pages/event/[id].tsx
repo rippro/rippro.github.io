@@ -1,13 +1,9 @@
 /** @format */
 
 import { VFC } from "react";
-import { NextRouter, useRouter } from "next/router";
+import { useRouter } from "next/router";
 import { Layout } from "../../components/Layout";
-import {
-  Events,
-  EventDetails,
-  EventDetailType,
-} from "../../components/EventList";
+import { EventDetails, EventDetailType } from "../../components/EventList";
 import { useState, useEffect } from "react";
 
 import styles from "../../components/section.module.css";
