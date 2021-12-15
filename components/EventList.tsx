@@ -104,7 +104,7 @@ type otherContentType = {
   content: JSX.Element;
 };
 
-type EventDetailType = {
+export type EventDetailType = {
   title: string;
   day?: "Day 1" | "Day 2" | "Day 3";
   date: {
@@ -637,12 +637,12 @@ export const EventDetails: EventDetailsType = {
     ],
     iodata: <a href="dataset.zip">データセット</a>,
     writer: [
-      "@shirokurostone",
-      "@kioa341",
-      "@slip0110",
-      "@epee_noir",
-      "@Respect2D",
-      "@_shnyh",
+      "shirokurostone",
+      "kioa341",
+      "slip0110",
+      "epee_noir",
+      "Respect2D",
+      "_shnyh",
     ],
   },
 };
