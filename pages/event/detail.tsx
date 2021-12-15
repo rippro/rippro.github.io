@@ -28,6 +28,70 @@ const getContestId = (router: NextRouter): string => {
   return contestId;
 };
 
+type IODataProps = {
+  iodata?: JSX.Element | null | undefined;
+};
+const IODataElement: VFC<IODataProps> = (Props: IODataProps) => {
+  if (Props.iodata) {
+    return (
+      <>
+        <h3>問題文・入出力データ</h3>
+        {Props.iodata}
+      </>
+    );
+  } else {
+    return <></>;
+  }
+};
+
+type PlaceProps = {
+  place?: string | null | undefined;
+};
+const PlaceElement: VFC<PlaceProps> = (Props: PlaceProps) => {
+  if (Props.place) {
+    return (
+      <>
+        <h3>イベント概要</h3>
+        <p>{Props.place}</p>
+      </>
+    );
+  } else {
+    return <></>;
+  }
+};
+
+type PictureProps = {
+  link?: string | null | undefined;
+  contestId?: string | null | undefined;
+};
+const PictureElement: VFC<PictureProps> = (Props: PictureProps) => {
+  if (Props.link) {
+    return (
+      <div style={{ textAlign: "center" }}>
+        <img src={`/static/contestData/${Props.contestId}/${Props.link}`} />
+      </div>
+    );
+  } else {
+    return <></>;
+  }
+};
+
+type ScheduleProps = {
+  schedule?: JSX.Element | null | undefined;
+};
+const ScheduleElement: VFC<ScheduleProps> = (Props: ScheduleProps) => {
+  if (Props.schedule) {
+    return (
+      <>
+        <h3>合宿内容</h3>
+        {Props.schedule}
+      </>
+    );
+  } else {
+    return <></>;
+  }
+};
+
 const EventDetail: VFC = () => {
   const router = useRouter();
   const contestId: string = getContestId(router);
@@ -38,15 +102,20 @@ const EventDetail: VFC = () => {
     >
       <div className={styles.section}>
         <h2>{EventDetails[contestId].title}</h2>
+        <PictureElement
+          contestId={contestId}
+          link={EventDetails[contestId].picture}
+        />
         <h3>開催日時</h3>
         {EventDetails[contestId].date.begin} -{" "}
-        {EventDetails[contestId].date.begin}
+        {EventDetails[contestId].date.end}
         <div>
           <h3>イベント概要</h3>
           <a href={EventDetails[contestId].detailURL}>
             {EventDetails[contestId].detailURL}
           </a>
         </div>
+        <PlaceElement place={EventDetails[contestId].place} />
         <div>
           <h3>問題セット</h3>
           <ul>
@@ -69,13 +138,19 @@ const EventDetail: VFC = () => {
                 <tr className={detailsStyle.tr} key={commentary.title}>
                   <td className={detailsStyle.td}>{commentary.title}</td>
                   <td className={detailsStyle.td}>
-                    <a href={commentary.link}>{extension(commentary.link)}</a>
+                    <a
+                      href={`/static/contestData/${contestId}/${commentary.link}`}
+                    >
+                      {extension(commentary.link)}
+                    </a>
                   </td>
                 </tr>
               );
             })}
           </table>
         </div>
+        <IODataElement iodata={EventDetails[contestId].iodata} />
+        <ScheduleElement schedule={EventDetails[contestId].schedule} />
       </div>
     </Layout>
   );
