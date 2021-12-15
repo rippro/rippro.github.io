@@ -1,11 +1,11 @@
 /** @format */
 
-export interface EventType {
+export type EventType = {
   title: string;
   detail: string;
   date?: "Day 1" | "Day 2" | "Day 3";
   id: string;
-}
+};
 
 // TODO: detailの日時・場所をのフォーマット統一させる
 export const Events: EventType[] = [
@@ -88,38 +88,43 @@ export const Events: EventType[] = [
   },
 ];
 
-interface problemSetType {
+type problemSetType = {
   college: string;
   link: string;
-}
+};
 
-interface problemType {
+type problemType = {
   title: string;
   link: string;
-}
+};
 
-interface otherContentType {
+type otherContentType = {
   title: string;
   content: JSX.Element;
-}
+};
 
-interface EventDetailType {
+type EventDetailType = {
   title: string;
   day?: "Day 1" | "Day 2" | "Day 3";
   date: {
     begin: string;
     end: string;
   };
-  detailURL: string;
+  detailURL?: string;
   problemSet: problemSetType[];
   commentary: problemType[];
   writer?: string[];
-  otherContent?: otherContentType;
-}
+  picture?: string;
+  judge?: string;
+  iodata?: JSX.Element;
+  schedule?: JSX.Element;
+  place?: string;
+  otherContent?: otherContentType[];
+};
 
-interface EventDetailsType {
+type EventDetailsType = {
   [key: string]: EventDetailType;
-}
+};
 
 export const EventDetails: EventDetailsType = {
   rupc2019: {
@@ -278,207 +283,351 @@ export const EventDetails: EventDetailsType = {
     title: "会津合宿 2016",
     day: "Day 1",
     date: {
-      begin: "",
-      end: "",
+      begin: "2016/9/17",
+      end: "2016/9/19",
     },
-    detailURL: "",
+    detailURL: "https://atnd.org/events/79743",
     problemSet: [
-      { college: "", link: "" },
-      { college: "", link: "" },
-      { college: "", link: "" },
+      { college: "Day1(立命館大学)", link: "" },
+      { college: "Day2(会津大学)", link: "" },
+      { college: "Day3(北海道大学)", link: "" },
     ],
     commentary: [
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
+      { title: "全体講評", link: "kohyo.pdf" },
+      { title: "A: キャベツ", link: "A.pdf" },
+      { title: "B: イカったー", link: "B.pdf" },
+      { title: "C: 失われしグラフ", link: "C.pdf" },
+      { title: "D: DAGトリオ(Easy)", link: "D.pdf" },
+      { title: "E: 札", link: "E.pdf" },
+      { title: "F: 紙の折りたたみ", link: "F.pdf" },
+      { title: "G: DAGトリオ(Hard)", link: "G.pdf" },
     ],
-    writer: [""],
-    otherContent: { title: "", content: <></> },
   },
   rupc2016: {
     title: "立命合宿 2016",
     day: "Day 1",
     date: {
-      begin: "",
-      end: "",
+      begin: "2016/3/6",
+      end: "2016/3/8",
     },
-    detailURL: "",
+    detailURL: "https://atnd.org/events/74939",
     problemSet: [
-      { college: "", link: "" },
-      { college: "", link: "" },
-      { college: "", link: "" },
+      { college: "Day 1 (立命館大学)", link: "" },
+      { college: "Day 2 (会津大学さん)", link: "" },
+      { college: "Day 3 (北海道大学さん)", link: "" },
     ],
     commentary: [
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
+      { title: "A: 秤", link: "A.pdf" },
+      { title: "B: ハミング距離", link: "B.pdf" },
+      { title: "C: 足し算掛け算", link: "C.pdf" },
+      { title: "D: スキャナー", link: "D.pdf" },
+      { title: "E: 28", link: "E.pdf" },
+      { title: "F: リレー", link: "F.pdf" },
+      { title: "  別解", link: "F_tm.pdf" },
+      { title: "G: 塗るだけ", link: "G.pdf" },
     ],
-    writer: [""],
-    otherContent: { title: "", content: <></> },
+    iodata: (
+      <>
+        <p>
+          <a href="submission.zip">submission.zip</a> (11.4MB)
+        </p>
+        <p>
+          AOJ に収録される予定のデータです．Clarification
+          やコンテスト後に受けた指摘に対応し，下のような修正が加えられています．G
+          問題の問題文には重要な制約が抜け落ちていたため，解けない問題となってしまいました．
+          ご迷惑おかけして申し訳ありませんでした．詳しくは解説スライドの 2
+          ページをご覧ください．
+          <ul>
+            <li>F, G の問題文の修正</li>
+            <li>F, G のテストケースの改善 (コーナーケースの追加)</li>
+          </ul>
+        </p>
+      </>
+    ),
   },
   acpc2015: {
     title: "会津合宿 2015",
     day: "Day 1",
     date: {
-      begin: "",
-      end: "",
+      begin: "2015/9/21",
+      end: "2015/9/23",
     },
     detailURL: "",
     problemSet: [
-      { college: "", link: "" },
-      { college: "", link: "" },
-      { college: "", link: "" },
+      { college: "Day1(立命館大学)", link: "" },
+      { college: "Day2(会津大学)", link: "" },
+      { college: "Day3(北海道大学)", link: "" },
     ],
     commentary: [
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
+      { title: "A: 指折り数えて", link: "A.pdf" },
+      { title: "B: 平均値の嘘", link: "B.pdf" },
+      { title: "C: 壺", link: "C.pdf" },
+      { title: "D: 市松模様", link: "D.pdf" },
+      { title: "E: 台風", link: "E.pdf" },
+      { title: "F: 卵", link: "F.pdf" },
     ],
-    writer: [""],
-    otherContent: { title: "", content: <></> },
   },
   rupc2015: {
     title: "立命合宿 2015",
     day: "Day 1",
     date: {
-      begin: "",
-      end: "",
+      begin: "2015/3/14",
+      end: "2015/3/16",
     },
-    detailURL: "",
+    detailURL: "https://atnd.org/events/62742",
     problemSet: [
-      { college: "", link: "" },
-      { college: "", link: "" },
-      { college: "", link: "" },
+      { college: "Day1(立命館大学)", link: "" },
+      { college: "Day2(会津大学)", link: "" },
+      { college: "Day3(北海道大学)", link: "" },
     ],
     commentary: [
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
+      { title: "総評", link: "all.pdf" },
+      { title: "A: Soccer", link: "A.pdf" },
+      { title: "B: RUPC", link: "B.pdf" },
+      { title: "C: Shopping", link: "C.pdf" },
+      { title: "D: Hopping Hearts", link: "D.pdf" },
+      { title: "E: Ocarina of Time", link: "E.pdf" },
+      { title: "F: Tree", link: "F.pdf" },
+      { title: "G: Bob's Bomb", link: "G.pdf" },
     ],
-    writer: [""],
-    otherContent: { title: "", content: <></> },
+    picture: "rupc2015.png",
+    judge: "http://judge.u-aizu.ac.jp/onlinejudge/index.jsp",
+    iodata: (
+      <>
+        <a href="data.zip">data.zip</a> 84,659 KB A, G
+        問題は浮動小数点誤差，それ以外は diff
+        ジャッジです．コンテスト後に受けた指摘を反映させたデータであり，コンテスト中に使用したデータとは異なります．AOJ
+        のボリュームに収録される予定のものと同じです． G
+        問題にジャッジミスがありました．大変申し訳ありません．上の問題の入出力データも間違ったままのものなのでご注意ください．
+      </>
+    ),
+    place: "立命館大学BKC",
+    schedule: (
+      <table>
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Time</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th rowSpan={5}>Day 1</th>
+            <td>13:00-14:00</td>
+            <td>集合，開会，自己紹介など</td>
+          </tr>
+          <tr>
+            <td>14:00 - 14:30</td>
+            <td>チーム編成</td>
+          </tr>
+          <tr>
+            <td>14:30 - 17:30</td>
+            <td>模擬コンテスト1 (3時間セット)</td>
+          </tr>
+          <tr>
+            <td>17:30 - 18:30</td>
+            <td>問題解説</td>
+          </tr>
+          <tr>
+            <td>19:00 -</td>
+            <td>懇親会</td>
+          </tr>
+          <tr>
+            <th rowSpan={4}>Day 2</th>
+            <td>10:00 - 11:00</td>
+            <td>集合・チーム編成</td>
+          </tr>
+          <tr>
+            <td>11:00 - 16:00</td>
+            <td>模擬コンテスト2 (5時間セット)</td>
+          </tr>
+          <tr>
+            <td>16:00 - 17:00</td>
+            <td>問題解説</td>
+          </tr>
+          <tr>
+            <td>19:00 -</td>
+            <td>懇親会</td>
+          </tr>
+          <tr>
+            <th rowSpan={3}>Day 3</th>
+            <td>09:00 - 10:00</td>
+            <td>集合・チーム編成</td>
+          </tr>
+          <tr>
+            <td>10:00 - 13:00</td>
+            <td>模擬コンテスト3 (3時間セット)</td>
+          </tr>
+          <tr>
+            <td>13:00 -</td>
+            <td>問題解説</td>
+          </tr>
+        </tbody>
+      </table>
+    ),
   },
   rupc2013: {
     title: "立命合宿 2013",
     day: "Day 3",
     date: {
-      begin: "",
-      end: "",
+      begin: "2013/3/11",
+      end: "2013/3/13",
     },
-    detailURL: "",
     problemSet: [
-      { college: "", link: "" },
-      { college: "", link: "" },
-      { college: "", link: "" },
+      { college: "Day1(会津大学)", link: "" },
+      { college: "Day2(大阪大学)", link: "" },
+      { college: "Day3(立命館大学)", link: "" },
     ],
     commentary: [
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
+      { title: "A: Grid Mori", link: "" },
+      { title: "B: VOCAL ANDROID", link: "" },
+      { title: "C: Project Management	", link: "" },
+      { title: "D: Statement Coverage	", link: "" },
+      { title: "E: Twins Idol", link: "" },
+      { title: "F: Operation training for BYDOL", link: "" },
+      { title: "G: Computer Onesan", link: "" },
     ],
-    writer: [""],
-    otherContent: { title: "", content: <></> },
+    judge: "http://judge.u-aizu.ac.jp/onlinejudge/index.jsp",
+    place: "立命館大学",
+    schedule: (
+      <table>
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Time</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th rowSpan={5}>Day 1</th>
+            <td>13:00-14:00</td>
+            <td>集合，開会，自己紹介など</td>
+          </tr>
+          <tr>
+            <td>14:00 - 14:30</td>
+            <td>チーム編成</td>
+          </tr>
+          <tr>
+            <td>14:30 - 17:30</td>
+            <td>模擬コンテスト1 (3時間セット)</td>
+          </tr>
+          <tr>
+            <td>17:30 - 18:30</td>
+            <td>問題解説</td>
+          </tr>
+          <tr>
+            <td>19:00 -</td>
+            <td>懇親会</td>
+          </tr>
+          <tr>
+            <th rowSpan={3}>Day 2</th>
+            <td>10:00 - 11:00</td>
+            <td>集合・チーム編成</td>
+          </tr>
+          <tr>
+            <td>11:00 - 16:00</td>
+            <td>模擬コンテスト2 (5時間セット)</td>
+          </tr>
+          <tr>
+            <td>16:00 - 17:00</td>
+            <td>問題解説</td>
+          </tr>
+          <tr>
+            <th rowSpan={3}>Day 3</th>
+            <td>09:00 - 10:00</td>
+            <td>集合・チーム編成</td>
+          </tr>
+          <tr>
+            <td>10:00 - 13:00</td>
+            <td>模擬コンテスト3 (3時間セット)</td>
+          </tr>
+          <tr>
+            <td>14:00 - 15:00</td>
+            <td>問題解説</td>
+          </tr>
+        </tbody>
+      </table>
+    ),
   },
   acpc2012: {
     title: "会津合宿 2012",
     day: "Day 1",
     date: {
-      begin: "",
-      end: "",
+      begin: "2012/9/3",
+      end: "2012/9/5",
     },
-    detailURL: "",
     problemSet: [
-      { college: "", link: "" },
-      { college: "", link: "" },
-      { college: "", link: "" },
+      { college: "Day1(立命館大学)", link: "" },
+      { college: "Day2(会津大学)", link: "" },
+      { college: "Day3(会津大学)", link: "" },
     ],
     commentary: [
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
+      { title: "A: フリック入力", link: "A.ppdx" },
+      { title: "B: 第二次ProblemB大戦	", link: "B.ppdx" },
+      { title: "C: 高所恐怖症", link: "C.ppdx" },
+      { title: "D: アニペロ2012", link: "D.ppdx" },
+      { title: "E: マークアップ言語は衰退しました", link: "E.ppdx" },
+      { title: "F: 透明な麻雀牌", link: "F.ppdx" },
+      { title: "G: コードアートオンライン", link: "G.ppdx" },
     ],
-    writer: [""],
-    otherContent: { title: "", content: <></> },
   },
   rupc2012: {
     title: "立命合宿 2012",
     day: "Day 3",
     date: {
-      begin: "",
-      end: "",
+      begin: "2012/3/13",
+      end: "2012/3/15",
     },
-    detailURL: "",
+    judge: "http://judge.u-aizu.ac.jp/onlinejudge/index.jsp",
     problemSet: [
-      { college: "", link: "" },
-      { college: "", link: "" },
-      { college: "", link: "" },
+      { college: "Day1(会津大学)", link: "" },
+      { college: "Day2(大阪大学)", link: "" },
+      { college: "Day3(立命館大学)", link: "" },
     ],
     commentary: [
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
+      { title: "A: Chicken or the Egg", link: "kohyo.pdf" },
+      { title: "B: Unequal Dice", link: "A.pdf" },
+      { title: "C: Lucky Dip", link: "B.pdf" },
+      { title: "D: Memory Leak", link: "C.pdf" },
+      { title: "E: Elevator", link: "D.pdf" },
+      { title: "F: Icy Composer", link: "E.pdf" },
+      { title: "G: Satan Attacks", link: "F.pdf" },
     ],
-    writer: [""],
-    otherContent: { title: "", content: <></> },
   },
   rupc2011: {
     title: "立命館プログラミングコンテスト2011",
     date: {
-      begin: "",
+      begin: "2011/10/15/",
       end: "",
     },
-    detailURL: "",
+    judge: "http://judge.u-aizu.ac.jp/onlinejudge/index.jsp",
     problemSet: [
-      { college: "", link: "" },
-      { college: "", link: "" },
-      { college: "", link: "" },
+      {
+        college: "立命館大学",
+        link: "https://onlinejudge.u-aizu.ac.jp/challenges/sources/VPC/RUPC?year=2011",
+      },
     ],
     commentary: [
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
-      { title: "", link: "" },
+      { title: "問題A: スワップ暗号", link: "A.pdf" },
+      { title: "問題B: B問題", link: "B.pdf" },
+      { title: "問題C: Seishun 18 Kippu", link: "C.pdf" },
+      { title: "問題D: 伝説の剣", link: "D.pdf" },
+      { title: "問題E: アニペロ", link: "E.pdf" },
+      { title: "問題F: Farey Sequence", link: "F.pdf" },
+      { title: "問題G: 水時計", link: "G.pdf" },
+      { title: "問題H: Oh, My Goat!", link: "H.pdf" },
+      { title: "問題I: カスタムペイント職人", link: "I.pdf" },
     ],
-    writer: [""],
-    otherContent: { title: "", content: <></> },
+    iodata: <a href="dataset.zip">データセット</a>,
+    writer: [
+      "@shirokurostone",
+      "@kioa341",
+      "@slip0110",
+      "@epee_noir",
+      "@Respect2D",
+      "@_shnyh",
+    ],
   },
 };
