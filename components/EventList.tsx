@@ -548,13 +548,13 @@ export const EventDetails: EventDetailsType = {
       { college: 'Day3(会津大学)', link: '' }
     ],
     commentary: [
-      { title: 'A: フリック入力', link: 'A.ppdx' },
-      { title: 'B: 第二次ProblemB大戦	', link: 'B.ppdx' },
-      { title: 'C: 高所恐怖症', link: 'C.ppdx' },
-      { title: 'D: アニペロ2012', link: 'D.ppdx' },
+      { title: 'A: フリック入力', link: 'A.pdf' },
+      { title: 'B: 第二次ProblemB大戦	', link: 'B.pdf' },
+      { title: 'C: 高所恐怖症', link: 'C.pdf' },
+      { title: 'D: アニペロ2012', link: 'D.pdf' },
       { title: 'E: マークアップ言語は衰退しました', link: 'E.pdf' },
-      { title: 'F: 透明な麻雀牌', link: 'F.ppdx' },
-      { title: 'G: コードアートオンライン', link: 'G.ppdx' }
+      { title: 'F: 透明な麻雀牌', link: 'F.pdf' },
+      { title: 'G: コードアートオンライン', link: 'G.pdf' }
     ]
   },
   rupc2012: {
@@ -571,13 +571,13 @@ export const EventDetails: EventDetailsType = {
       { college: 'Day3(立命館大学)', link: '' }
     ],
     commentary: [
-      { title: 'A: Chicken or the Egg', link: 'kohyo.pptx' },
-      { title: 'B: Unequal Dice', link: 'A.pptx' },
-      { title: 'C: Lucky Dip', link: 'B.pptx' },
-      { title: 'D: Memory Leak', link: 'C.pptx' },
-      { title: 'E: Elevator', link: 'D.pptx' },
-      { title: 'F: Icy Composer', link: 'E.pptx' },
-      { title: 'G: Satan Attacks', link: 'F.pptx' }
+      { title: 'A: Chicken or the Egg', link: 'kohyo.pdf' },
+      { title: 'B: Unequal Dice', link: 'A.pdf' },
+      { title: 'C: Lucky Dip', link: 'B.pdf' },
+      { title: 'D: Memory Leak', link: 'C.pdf' },
+      { title: 'E: Elevator', link: 'D.pdf' },
+      { title: 'F: Icy Composer', link: 'E.pdf' },
+      { title: 'G: Satan Attacks', link: 'F.pdf' }
     ]
   },
   rupc2011: {
