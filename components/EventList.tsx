@@ -135,7 +135,6 @@ export const EventDetails: EventDetailsType = {
       begin: '2019/3/5',
       end: '2019/3/7'
     },
-    detailURL: 'https://atnd.org/events/103718',
     problemSet: [
       {
         college: 'Day 1 (立命館大学)',
@@ -168,7 +167,7 @@ export const EventDetails: EventDetailsType = {
       begin: '2018/9/19',
       end: '2018/9/21'
     },
-    detailURL: 'https://atnd.org/events/98718',
+    detailURL: 'https://web.archive.org/web/20190321162010/https://atnd.org/events/98718',
     problemSet: [
       {
         college: 'Day1(立命館大学)',
@@ -202,7 +201,7 @@ export const EventDetails: EventDetailsType = {
       begin: '2018/3/26',
       end: '2018/3/28'
     },
-    detailURL: 'https://atnd.org/events/94033',
+    detailURL: 'https://web.archive.org/web/20180202123544/https://atnd.org/events/94033',
     problemSet: [
       {
         college: 'Day 1 (立命館大学)',
@@ -235,7 +234,6 @@ export const EventDetails: EventDetailsType = {
       begin: '2017/9/18',
       end: '2017/9/20'
     },
-    detailURL: 'https://atnd.org/events/90222',
     problemSet: [
       { college: 'Day1(立命館大学)', link: '' },
       { college: 'Day2(会津大学)', link: '' },
@@ -259,7 +257,7 @@ export const EventDetails: EventDetailsType = {
       begin: '2017/3/22',
       end: '2017/3/24'
     },
-    detailURL: 'https://atnd.org/events/85691',
+    detailURL: 'https://web.archive.org/web/20181205111517/https://atnd.org/events/85691',
     problemSet: [
       { college: 'Day 1 (立命館大学 & 大阪大学)', link: '' },
       { college: 'Day 2 (会津大学さん)', link: '' },
@@ -287,7 +285,7 @@ export const EventDetails: EventDetailsType = {
       begin: '2016/9/17',
       end: '2016/9/19'
     },
-    detailURL: 'https://atnd.org/events/79743',
+    detailURL: 'https://web.archive.org/web/20200326193543/https://atnd.org/events/79743',
     problemSet: [
       { college: 'Day1(立命館大学)', link: '' },
       { college: 'Day2(会津大学)', link: '' },
@@ -311,7 +309,6 @@ export const EventDetails: EventDetailsType = {
       begin: '2016/3/6',
       end: '2016/3/8'
     },
-    detailURL: 'https://atnd.org/events/74939',
     problemSet: [
       { college: 'Day 1 (立命館大学)', link: '' },
       { college: 'Day 2 (会津大学さん)', link: '' },
@@ -326,24 +323,7 @@ export const EventDetails: EventDetailsType = {
       { title: 'F: リレー', link: 'F.pdf' },
       { title: '別解', link: 'F_tm.pdf' },
       { title: 'G: 塗るだけ', link: 'G.pdf' }
-    ],
-    iodata: (
-      <>
-        <p>
-          <a href="submission.zip">submission.zip</a> (11.4MB)
-        </p>
-        <p>
-          AOJ に収録される予定のデータです．Clarification
-          やコンテスト後に受けた指摘に対応し，下のような修正が加えられています．G
-          問題の問題文には重要な制約が抜け落ちていたため，解けない問題となってしまいました．
-          ご迷惑おかけして申し訳ありませんでした．詳しくは解説スライドの 2 ページをご覧ください．
-          <ul>
-            <li>F, G の問題文の修正</li>
-            <li>F, G のテストケースの改善 (コーナーケースの追加)</li>
-          </ul>
-        </p>
-      </>
-    )
+    ]
   },
   acpc2015: {
     title: '会津合宿 2015',
@@ -374,7 +354,7 @@ export const EventDetails: EventDetailsType = {
       begin: '2015/3/14',
       end: '2015/3/16'
     },
-    detailURL: 'https://atnd.org/events/62742',
+    detailURL: 'https://web.archive.org/web/20150928232752/https://atnd.org/events/62742',
     problemSet: [
       { college: 'Day1(立命館大学)', link: '' },
       { college: 'Day2(会津大学)', link: '' },
@@ -392,15 +372,6 @@ export const EventDetails: EventDetailsType = {
     ],
     picture: 'rupc2015.png',
     judge: 'http://judge.u-aizu.ac.jp/onlinejudge/index.jsp',
-    iodata: (
-      <>
-        <a href="data.zip">data.zip</a> 84,659 KB
-        <br /> A, G 問題は浮動小数点誤差，それ以外は diff
-        ジャッジです．コンテスト後に受けた指摘を反映させたデータであり，コンテスト中に使用したデータとは異なります．AOJ
-        のボリュームに収録される予定のものと同じです． G 問題にジャッジミスがありました．大変申し訳ありません．
-        <b>上の問題の入出力データも間違ったままのものなのでご注意ください．</b>
-      </>
-    ),
     place: '立命館大学BKC',
     schedule: (
       <table className={detailsStyle.table}>
@@ -633,7 +604,11 @@ export const EventDetails: EventDetailsType = {
       { title: '問題H: Oh, My Goat!', link: 'H.pdf' },
       { title: '問題I: カスタムペイント職人', link: 'I.pdf' }
     ],
-    iodata: <a href="dataset.zip">データセット</a>,
+    iodata: (
+      <a href="dataset.zip" download>
+        データセット
+      </a>
+    ),
     writer: ['shirokurostone', 'kioa341', 'slip0110', 'epee_noir', 'Respect2D', '_shnyh']
   }
 }
