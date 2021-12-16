@@ -1,21 +1,22 @@
 [![Deploy](https://github.com/rippro/rippro.github.io/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/rippro/rippro.github.io/actions/workflows/gh-pages.yml)
+
 # RiPPro の Web サイト
 
 ## How to develop
 
-* Install Dependencies
+- Install Dependencies
 
 ```sh
 yarn
 ```
 
-* Develop
+- Develop
 
 ```sh
 yarn dev
 ```
 
-* Build & Export
+- Build & Export
 
 ```sh
 yarn build && yarn export

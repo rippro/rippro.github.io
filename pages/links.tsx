@@ -1,10 +1,10 @@
 /** @format */
 
-import { VFC } from "react";
-import { Layout } from "../components/Layout";
-import { SectionType, LinksType, sections } from "../components/Links";
+import { VFC } from 'react'
+import { Layout } from '../components/Layout'
+import { SectionType, LinksType, sections } from '../components/Links'
 
-import styles from "../components/section.module.css";
+import styles from '../components/section.module.css'
 
 const LinkSection: VFC<SectionType> = (Props: SectionType): JSX.Element => {
   return (
@@ -18,12 +18,12 @@ const LinkSection: VFC<SectionType> = (Props: SectionType): JSX.Element => {
                 {linkItem.title}
               </a>
             </li>
-          );
+          )
         })}
       </ul>
     </>
-  );
-};
+  )
+}
 
 const Links: VFC = () => {
   return (
@@ -34,11 +34,11 @@ const Links: VFC = () => {
       <div className={styles.section}>
         <h2>リンク</h2>
         {sections.map((section: SectionType) => {
-          return <LinkSection {...section} key={section.title} />;
+          return <LinkSection {...section} key={section.title} />
         })}
       </div>
     </Layout>
-  );
-};
+  )
+}
 
-export default Links;
+export default Links

@@ -1,12 +1,12 @@
 /** @format */
 
-import { VFC } from "react";
-import Link from "next/link";
-import { Layout } from "../../components/Layout";
-import { EventType, Events } from "../../components/EventList";
+import { VFC } from 'react'
+import Link from 'next/link'
+import { Layout } from '../../components/Layout'
+import { EventType, Events } from '../../components/EventList'
 
-import styles from "../../components/section.module.css";
-import eventStyles from "../../styles/event.module.css";
+import styles from '../../components/section.module.css'
+import eventStyles from '../../styles/event.module.css'
 
 const Event: VFC = () => {
   return (
@@ -18,17 +18,17 @@ const Event: VFC = () => {
         return (
           <div className={styles.section} key={event.title}>
             <h2>
-              {event.title} {event.date ? event.date + " " : ""}解説
+              {event.title} {event.date ? event.date + ' ' : ''}解説
             </h2>
             {event.detail}
             <div className={eventStyles.detail}>
               <Link href={`event/${event.id}`}>詳細はこちら</Link>
             </div>
           </div>
-        );
+        )
       })}
     </Layout>
-  );
-};
+  )
+}
 
-export default Event;
+export default Event

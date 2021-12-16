@@ -1,9 +1,9 @@
 /** @format */
 
-import { VFC } from "react";
-import Link from "next/link";
+import { VFC } from 'react'
+import Link from 'next/link'
 
-import styles from "./Navigator.module.css";
+import styles from './Navigator.module.css'
 
 const Navigator: VFC = () => {
   return (
@@ -29,7 +29,7 @@ const Navigator: VFC = () => {
         <Link href="/menbers">部員向け</Link>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Navigator;
+export default Navigator

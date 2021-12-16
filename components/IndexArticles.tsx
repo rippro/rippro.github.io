@@ -1,9 +1,9 @@
 /** @format */
 
-import { VFC } from "react";
+import { VFC } from 'react'
 
-import styles from "./section.module.css";
-import articleStyles from "./IndexArticles.module.css";
+import styles from './section.module.css'
+import articleStyles from './IndexArticles.module.css'
 
 const IndexArticles: VFC = () => {
   return (
@@ -19,10 +19,8 @@ const IndexArticles: VFC = () => {
       <div className={styles.section}>
         <h2>ようこそ RiPPro へ</h2>
         <p>
-          立命館大学情報理工学部プロジェクト団体 RiPPro (<b>Ri</b>tsumeikan{" "}
-          <b>P</b>rogramming <b>Pro</b>ject) は、ACM-ICPC
-          (プログラミングの学生世界大会)
-          などの大会で入賞することを目的として結成されました。
+          立命館大学情報理工学部プロジェクト団体 RiPPro (<b>Ri</b>tsumeikan <b>P</b>rogramming <b>Pro</b>ject)
+          は、ACM-ICPC (プログラミングの学生世界大会) などの大会で入賞することを目的として結成されました。
         </p>
         <p>
           私達は、アルゴリズムの勉強会や問題を解くことで目的に向け頑張っています。
@@ -34,7 +32,7 @@ const IndexArticles: VFC = () => {
         <p>
           <a href="https://icpc.iisf.or.jp/" target="_blank" rel="noopener noreferrer">
             ACM-ICPC
-          </a>{" "}
+          </a>{' '}
           とは国際学会の主催する歴史あるプログラミングコンテストです。
           パズルのような問題を適切なアルゴリズムで解くプログラムを作成し、正答数や解答時間を大学選抜グループ間で競います。
         </p>
@@ -46,26 +44,22 @@ const IndexArticles: VFC = () => {
             <dd>プログラミングコンテストを主目的とする団体です。</dd>
             <dt>
               <a href="http://rione.org/" target="_blank" rel="noopener noreferrer">
-                {" "}
-                Ri-one{" "}
+                {' '}
+                Ri-one{' '}
               </a>
             </dt>
             <dd>RoboCupを主目的としている団体です。</dd>
             <dt>
-              <a
-                href="https://rigpp.sakura.ne.jp/wp/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {" "}
-                RiG++{" "}
+              <a href="https://rigpp.sakura.ne.jp/wp/" target="_blank" rel="noopener noreferrer">
+                {' '}
+                RiG++{' '}
               </a>
             </dt>
             <dd>ゲームとCGの作成を主目的としている団体です。</dd>
             <dt>
               <a href="https://risec.github.io/" target="_blank" rel="noopener noreferrer">
-                {" "}
-                RiST{" "}
+                {' '}
+                RiST{' '}
               </a>
             </dt>
             <dd>情報セキュリティの相互学習を主目的としている団体です。</dd>
@@ -73,7 +67,7 @@ const IndexArticles: VFC = () => {
         </p>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default IndexArticles;
+export default IndexArticles

@@ -1,17 +1,14 @@
 /** @format */
 
-import { VFC } from "react";
-import { Layout } from "../components/Layout";
-import Twitter from "../components/Twitter";
+import { VFC } from 'react'
+import { Layout } from '../components/Layout'
+import Twitter from '../components/Twitter'
 
-import styles from "../components/section.module.css";
+import styles from '../components/section.module.css'
 
 const Contact: VFC = () => {
   return (
-    <Layout
-      title="Contact - RiPPro(立命館大学情報理工学部プロジェクト団体)"
-      description="RiPProへのコンタクトページ"
-    >
+    <Layout title="Contact - RiPPro(立命館大学情報理工学部プロジェクト団体)" description="RiPProへのコンタクトページ">
       <div className={styles.section}>
         <h2>Contact</h2>
         <h3>連絡先</h3>
@@ -25,12 +22,8 @@ const Contact: VFC = () => {
             Mail: <a>ripprotarou[@]gmail.com</a>
           </dd>
           <dd>
-            Twitter:{" "}
-            <a
-              href="https://twitter.com/pj_rippro"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            Twitter:{' '}
+            <a href="https://twitter.com/pj_rippro" target="_blank" rel="noopener noreferrer">
               @PJ_RiPPro
             </a>
           </dd>
@@ -46,7 +39,7 @@ const Contact: VFC = () => {
       </div>
       <Twitter />
     </Layout>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact

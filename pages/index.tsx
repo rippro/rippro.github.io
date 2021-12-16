@@ -1,9 +1,9 @@
 /** @format */
 
-import type { NextPage } from "next";
-import { Layout } from "../components/Layout";
-import Twitter from "../components/Twitter";
-import IndexArticles from "../components/IndexArticles";
+import type { NextPage } from 'next'
+import { Layout } from '../components/Layout'
+import Twitter from '../components/Twitter'
+import IndexArticles from '../components/IndexArticles'
 
 const Home: NextPage = () => {
   return (
@@ -16,7 +16,7 @@ const Home: NextPage = () => {
       </div>
       <Twitter />
     </Layout>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
