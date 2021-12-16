@@ -1,6 +1,7 @@
 /** @format */
 
 import { VFC } from 'react'
+import Link from 'next/link'
 
 import styles from './section.module.css'
 import articleStyles from './IndexArticles.module.css'
@@ -13,7 +14,7 @@ const IndexArticles: VFC = () => {
         新入生のみなさん、ご入学おめでとうございます！
         <br />
         新入生に限らず、RiPPro に興味がある方は
-        <a href="./welcome">こちら</a> をご覧ください。
+        <Link href="/welcome">こちら</Link> をご覧ください。
         <br />
       </div>
       <div className={styles.section}>
