@@ -18,9 +18,7 @@ const Contact: VFC = () => {
         ※Twitterの方が対応が早いため，Twitterでの連絡をおすすめします．
         <br />
         <dl>
-          <dd>
-            Mail: <a>ripprotarou[@]gmail.com</a>
-          </dd>
+          <dd>Mail: ripprotarou[@]gmail.com</dd>
           <dd>
             Twitter:{' '}
             <a href="https://twitter.com/pj_rippro" target="_blank" rel="noopener noreferrer">
