@@ -13,7 +13,7 @@ const IndexArticles: VFC = () => {
         新入生のみなさん、ご入学おめでとうございます！
         <br />
         新入生に限らず、RiPPro に興味がある方は
-        <a href="./welcome/index.html">こちら</a> をご覧ください。
+        <a href="./welcome">こちら</a> をご覧ください。
         <br />
       </div>
       <div className={styles.section}>
