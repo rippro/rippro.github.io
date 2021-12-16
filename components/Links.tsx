@@ -11,7 +11,7 @@ const ACMICPC: LinksType[] = [
     link: 'https://icpc.iisf.or.jp/'
   },
   {
-    title: 'ACM-ICPC OB/OG の会',
+    title: 'ICPC OB/OG の会',
     link: 'https://jag-icpc.org/'
   }
 ]
@@ -56,10 +56,6 @@ const others: LinksType[] = [
   {
     title: 'ICPC チャレンジ部 (ICPCCC) @ 九大',
     link: 'http://kyushu-u-icpccc.hatenablog.com/'
-  },
-  {
-    title: 'プロコンサークル @ 兵庫県立大',
-    link: 'https://sites.google.com/site/uhprocon/'
   },
   {
     title: '競技プログラミング部 @ 会津大',

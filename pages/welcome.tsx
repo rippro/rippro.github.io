@@ -1,6 +1,7 @@
 /** @format */
 
 import { VFC } from 'react'
+import Link from 'next/link'
 import { Layout } from '../components/Layout'
 import YouTube from 'react-youtube'
 
@@ -37,13 +38,19 @@ const Welcome: VFC = () => {
           過去にC++言語講習会で使用していたスライド（参考）
           <ul>
             <li>
-              <a href="https://www.slideshare.net/rippro/ss-75074872">入出力</a>
+              <a href="https://www.slideshare.net/rippro/ss-75074872" target="_blank" rel="noopener noreferrer">
+                入出力
+              </a>
             </li>
             <li>
-              <a href="https://www.slideshare.net/rippro/ss-75063033">条件分岐・繰り返し</a>
+              <a href="https://www.slideshare.net/rippro/ss-75063033" target="_blank" rel="noopener noreferrer">
+                条件分岐・繰り返し
+              </a>
             </li>
             <li>
-              <a href="https://www.slideshare.net/rippro/ss-75165601">配列</a>
+              <a href="https://www.slideshare.net/rippro/ss-75165601" target="_blank" rel="noopener noreferrer">
+                配列
+              </a>
             </li>
           </ul>
         </div>
@@ -67,7 +74,9 @@ const Welcome: VFC = () => {
             このようなことを考えることはパズルを解くのと同じようにとても楽しいですし、実際のプログラム開発でも役に立ちます。
           </p>
         </div>
-        <YouTube videoId="Q4gTV4r0zRs" className={welcomeStyles.iframe} containerClassName={welcomeStyles.youtube} />
+        <div style={{ width: '95%', margin: 'auto' }}>
+          <YouTube videoId="Q4gTV4r0zRs" className={welcomeStyles.iframe} containerClassName={welcomeStyles.youtube} />
+        </div>
         <div className={welcomeStyles.line}>
           <p>RiPProの普段の活動ではコンテスト形式でサークル内で競いながら問題を解いていきます。</p>
           <p>
@@ -98,7 +107,7 @@ const Welcome: VFC = () => {
           入部希望者または質問等がある方は，下記のページにアクセスしてください。
           <br />
           <br />
-          <a href="../contact.html">RiPProの「Contact」ページにアクセス</a>
+          <Link href="/contact">RiPProの「Contact」ページにアクセス</Link>
         </div>
       </div>
     </Layout>
