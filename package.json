@@ -7,7 +7,17 @@
     "export": "next export",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "lint": "next lint",
+    "prepare": "husky install",
     "start": "next start"
+  },
+  "lint-staged": {
+    "*.{css,less,sass,scss}": [
+      "stylelint --fix"
+    ],
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "highcharts": "^9.3.2",
@@ -23,6 +33,8 @@
     "@types/react": "17.0.34",
     "eslint": "7",
     "eslint-config-next": "12.0.3",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.2",
     "prettier": "^2.5.1",
     "typescript": "4.4.4"
   }

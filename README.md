@@ -7,7 +7,7 @@
 - Install Dependencies
 
 ```sh
-yarn
+yarn && yarn prepare
 ```
 
 - Develop
