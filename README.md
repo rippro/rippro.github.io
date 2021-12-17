@@ -1,4 +1,4 @@
-[![Deploy](https://github.com/rippro/rippro.github.io/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/rippro/rippro.github.io/actions/workflows/gh-pages.yml)
+[![pages-build-deployment](https://github.com/rippro/rippro.github.io/actions/workflows/pages/pages-build-deployment/badge.svg?branch=gh-pages)](https://github.com/rippro/rippro.github.io/actions/workflows/pages/pages-build-deployment)
 
 # RiPPro の Web サイト
 
