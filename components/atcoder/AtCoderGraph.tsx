@@ -10,55 +10,38 @@ import HighchartsReact from 'highcharts-react-official'
 type Props = {}
 
 type State = {
-  usersInfo: userInfoType[]
   userIDs: string[]
+  acceptedCounts: number[]
 }
 
-type userInfoType = {
-  user: string
-  count: number
+type UserInfoType = {
+  userID: string
+  acceptedCount: number
 }
 
 class AtCoderGraph extends React.Component<{}, State> {
   constructor(props: Props) {
     super(props)
     this.state = {
-      usersInfo: [],
-      userIDs: []
+      userIDs: [],
+      acceptedCounts: []
     }
-    this.getUserIDs()
+    this.getUsersInfo()
   }
-  getUserIDs = () => {
+  getUsersInfo = () => {
     const url =
-      'https://script.google.com/macros/s/AKfycbzOHe3hCcTYfAryVryiFmxXffXBPCI12Uk02psY0s_6leS4ukwxd2eE_c-BXNb80nvW/exec'
-    this.request(url).then((data: any) => {
-      this.setState({ userIDs: data as string[] })
-    })
-  }
-  getUserInfo = () => {
-    this.state.userIDs.forEach((user) => {
-      this.getACCount(user)
-    })
-  }
-  getACCount = (user: string) => {
-    const url = `https://kenkoooo.com/atcoder/atcoder-api/v2/user_info?user=${user}`
-    // 一度APIを叩いたら以降はできるだけ叩かない
-    if (!this.state.usersInfo.find((x) => x.user === user)) {
-      return this.request(url).then((data: any) => {
-        const userInfo = {
-          user: data.user_id as string,
-          count: data.accepted_count as number
-        }
-        // 一度グラフにユーザを追加したら以降は追加しない
-        if (!this.state.usersInfo.find((x) => x.user === userInfo.user)) {
-          let usersInfo = this.state.usersInfo
-          usersInfo.push(userInfo)
-          usersInfo.sort((a, b) => b.count - a.count)
-          this.setState({ usersInfo: usersInfo })
-        }
-        return userInfo
+      'https://script.google.com/macros/s/AKfycbyrbKATwoiI2W9CZOydrj46Z9DQY3NYysXoWx_8_DYObC6_c5JRcfPSgmpbZzzgNSWL/exec'
+    this.request(url).then((responseData: any) => {
+      const usersInfo: UserInfoType[] = responseData
+        .map((data: any) => {
+          return { userID: data.userID as string, acceptedCount: data.count as number }
+        })
+        .sort((user1: UserInfoType, user2: UserInfoType) => user2.acceptedCount - user1.acceptedCount)
+      this.setState({
+        userIDs: usersInfo.map((userInfo: UserInfoType) => userInfo.userID),
+        acceptedCounts: usersInfo.map((userInfo: UserInfoType) => userInfo.acceptedCount)
       })
-    }
+    })
   }
   request = (url: string) => {
     return fetch(url)
@@ -89,11 +72,11 @@ class AtCoderGraph extends React.Component<{}, State> {
       series: [
         {
           name: 'Solved',
-          data: this.state.usersInfo.map((userInfo) => userInfo.count)
+          data: this.state.acceptedCounts
         }
       ],
       xAxis: {
-        categories: this.state.usersInfo.map((userInfo) => userInfo.user),
+        categories: this.state.userIDs,
         title: {
           text: null
         }
@@ -122,7 +105,6 @@ class AtCoderGraph extends React.Component<{}, State> {
   }
 
   render() {
-    this.getUserInfo()
     return <div className={`${styles.body}`}>{<this.RenderSummary />}</div>
   }
 }

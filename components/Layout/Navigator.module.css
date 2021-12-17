@@ -1,45 +1,7 @@
-/** @format */
-
-.navi {
-  margin: 16px 0px 16px 24px;
-  width: 100px;
-  float: left;
-}
-
-.navi a {
-  display: block;
-}
-
 .navibutton {
-  margin: 8px 0px;
-  padding: 2px 0px;
-  background-color: #8e8e8e;
-  text-align: center;
-  border-top: solid 4px #ddd;
-  border-left: solid 4px #aaa;
-  border-bottom: solid 4px #444;
-  border-right: solid 4px #666;
+  font-size: 18px;
 }
 
-.navibutton:hover {
-  margin: 8px 0px;
-  padding: 2px 0px;
-  background-color: #707070;
-  text-align: center;
-  border-top: solid 4px #444;
-  border-left: solid 4px #666;
-  border-bottom: solid 4px #ddd;
-  border-right: solid 4px #aaa;
-}
-
-.navibutton a:link {
-  color: #fff;
-}
-
-.navibutton a:hover {
-  color: #fff;
-}
-
-.navibutton a:visited {
-  color: #fff;
+.welcome {
+  font-weight: bold;
 }

@@ -65,7 +65,7 @@ const Welcome: VFC = () => {
           </a>{' '}
           などでは初心者から熟練者まで幅広く参加できるコンテストが毎週開催されています。
         </div>
-        <h2>パソコンに問題を解かせよう！</h2>
+        <h2>パソコンに問題を解かせよう!</h2>
         <div className={welcomeStyles.line}>
           <p>良いプログラムとはどういうものでしょうか？</p>
           <p>例えばこの動画のお姉さんは一つ一つ必死に数えていますが、もっと効率よく数える方法は無いでしょうか。</p>
@@ -80,7 +80,7 @@ const Welcome: VFC = () => {
         <div className={welcomeStyles.line}>
           <p>RiPProの普段の活動ではコンテスト形式でサークル内で競いながら問題を解いていきます。</p>
           <p>
-            年に 2 回ほどですが、問題を作ったりもしています。 (例:
+            年に 1~2 回ほどですが、問題を作ったりもしています。 (例:
             <a
               href="https://onlinejudge.u-aizu.ac.jp/beta/room.html#RitsCamp16Day1"
               target="_blank"
@@ -99,15 +99,13 @@ const Welcome: VFC = () => {
             )
           </p>
           <p>
-            プログラミングの勉強をしたい方、クイズやパズルが好きな方、是非部室に来てください！情報理工学部生以外も大歓迎です！
+            プログラミングの勉強をしたい方、クイズやパズルが好きな方、是非部室に来てください
+            <b>情報理工学部生以外も大歓迎です</b>
           </p>
         </div>
         <h2>連絡先</h2>
-        <div>
-          入部希望者または質問等がある方は，下記のページにアクセスしてください。
-          <br />
-          <br />
-          <Link href="/contact">RiPProの「Contact」ページにアクセス</Link>
+        <div className={welcomeStyles.bottom}>
+          入部希望者または質問等がある方は，<Link href="/contact">Contactページ</Link>にアクセスしてください。
         </div>
       </div>
     </Layout>
