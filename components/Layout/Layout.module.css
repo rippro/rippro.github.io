@@ -8,10 +8,5 @@
 }
 
 .article {
-  margin-top: 8px;
-  margin-left: 16px;
-  margin-right: 16px;
-  margin-bottom: 48px;
-  width: 630px;
-  float: right;
+  margin: 8px;
 }
