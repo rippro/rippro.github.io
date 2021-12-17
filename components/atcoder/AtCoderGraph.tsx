@@ -30,7 +30,7 @@ class AtCoderGraph extends React.Component<{}, State> {
   }
   getUserIDs = () => {
     const url =
-      'https://script.google.com/macros/s/AKfycbzOHe3hCcTYfAryVryiFmxXffXBPCI12Uk02psY0s_6leS4ukwxd2eE_c-BXNb80nvW/exec'
+      'https://script.google.com/macros/s/AKfycbyrbKATwoiI2W9CZOydrj46Z9DQY3NYysXoWx_8_DYObC6_c5JRcfPSgmpbZzzgNSWL/exec'
     this.request(url).then((data: any) => {
       this.setState({ userIDs: data as string[] })
     })

@@ -1,15 +1,25 @@
 /* ユーザ情報取得API */
-function doGet(e) {
+const doGet = (e) => {
   const usersInfo = getUsersInfo()
   const json = JSON.stringify(usersInfo)
   return ContentService.createTextOutput().setMimeType(ContentService.MimeType.JSON).setContent(json)
+}
+
+const getUsersInfo = () => {
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('usersInfo')
+  const data = sheet.getRange(`A1:B${sheet.getLastRow()}`).getValues()
+  const usersInfo = data.map((user) => {
+    return { userID: user[0], count: user[1] }
+  })
+  console.log(usersInfo)
+  return usersInfo
 }
 
 /* ユーザID取得API */
 const getUserIDs = () => {
   const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('index')
   const data = sheet.getRange(`A2:A${sheet.getLastRow()}`).getValues()
-  let responseData = data.map((user) => user[0])
+  const responseData = data.map((user) => user[0])
   return responseData
 }
 
