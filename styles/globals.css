@@ -6,5 +6,4 @@ body {
   font-family: sans-serif;
   font-size: 16px;
   background: linear-gradient(-45deg, rgba(135, 206, 256, 0.8), rgba(100, 149, 256, 0.8)), url('/background.jpg');
-  background-size: cover;
 }

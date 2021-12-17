@@ -14,11 +14,6 @@
   vertical-align: middle;
 }
 
-.logo a:link {
-  color: #000;
-  text-decoration: none;
-}
-
 .logo a:hover {
   color: #000;
   text-decoration: underline;

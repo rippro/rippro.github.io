@@ -1,12 +1,7 @@
-/** @format */
-
-.navi {
-  margin: 8px;
-  display: flex;
+.navibutton {
+  font-size: 18px;
 }
 
-.navibutton {
-  margin: 2px;
-  padding: 8px;
-  text-align: center;
+.welcome {
+  font-weight: bold;
 }
