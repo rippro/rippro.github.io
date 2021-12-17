@@ -1,57 +1,53 @@
-# Webサイトの管理方法
+[![Deploy](https://github.com/rippro/rippro.github.io/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/rippro/rippro.github.io/actions/workflows/gh-pages.yml)
 
-## ファイルの編集方法
+# RiPPro の Web サイト
 
-ブラウザで https://github.com/rippro/rippro.github.io にアクセスし、GitHub上で編集する。
-または、ローカルに git clone し、編集して commit, push する。
+## How to develop
 
-## ページの追加
+- Install Dependencies
 
-template.htmlを使ってください．
-タイトル，パンくずリスト，右のナビゲーションの更新を忘れないように．
-
-## イベントの追加方法
-
-直近のイベントはindex.htmlにsectionを足してください．
-3から5つぐらいが限度だと思います．センスに任せます．
-イベントそのものはeventディレクトリで作ってください．
-ページと同様にタイトル，パンくずリストの更新を忘れないように．
-
-## ページ構成（#つきはid，それ以外はclass）
-
-h1タグはタイトル専用
-h2で章，h3で節
-
+```sh
+yarn && yarn prepare
 ```
-#main：全体
-	#head：ヘッダ
-		#tagline：タグライン
-	#article：記事
-		#breadcrumbs：パンくずリスト
-		section：章
-			detail：詳細
-	#navi：ナビゲーション
-		navibutton：ボタン
-	#footer：フッター
+
+- Develop
+
+```sh
+yarn dev
 ```
-基本的にidになってるものはいじらない．
-逆にclassになってるものは増やしたり減らしたりしてください．
 
-- ベースカラー：#c0c0c0
-- 背景カラー：#808080
-- ボトム：立命カラー(#700)
-- アクセント：青系(#6CBAD8・#cdf0fd)
+- Build & Export
 
-## 注意
+```sh
+yarn build && yarn export
+```
 
-style.cssで位置関係をいじると
-結構右のナビゲーションとかトップのNewsBoxが崩れたりする．
-フォルダを作ったらindex.htmlを必ず置くこと．
+## Deploy
 
-## パーミッションの設定
-- 普通の公開ファイル(index.htmlなど)
-  - chmod 644 hogefile
-- 外部に見せたくないファイルの設定(README.txt, .htpasswdなど)
-  - chmod 600 hogefile
-- 外部に見せたくないディレクトリの設定(.gitなど)
-  - chmod 700 hogedir
+GitHub Actions で Push 時に自動デプロイされます．
+
+## コンテンツの追加
+
+それぞれのファイルはここにあります．
+
+```txt
+|--components
+| |--EventList.tsx            # RUPC, ACPCなどのイベント一覧と各コンテストの詳細情報一覧
+| |--IndexArticles.tsx        # インデックスページの記事(コンテンツ)
+| |--Layout
+| | |--Navigator.tsx          # 左側にあるナビゲーションバー
+| |--Links.tsx                # Linksページのリンク内容
+|--pages
+| |--_app.tsx
+| |--contact.tsx
+| |--event
+| | |--[id].tsx
+| | |--index.tsx
+| |--index.tsx
+| |--links.tsx
+| |--menbers.tsx
+| |--welcome.tsx
+|--public
+| |--static
+| | |--contestData/           # ここにRUPC, ACPCなどの解説ファイルなどを置きます
+```

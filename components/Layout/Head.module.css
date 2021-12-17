@@ -1,0 +1,37 @@
+/** @format */
+
+.head {
+  margin: 16px 16px;
+  padding: 2px 0px;
+  border-bottom: solid 2px #700;
+}
+
+.head h1 {
+  color: #000;
+  margin-top: -8px;
+  margin-left: 16px;
+  margin-bottom: 0px;
+  padding-bottom: 16px;
+  font-size: 36px;
+  font-family: serif;
+}
+
+.head h1 a:link {
+  color: #000;
+  text-decoration: none;
+}
+
+.head h1 a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+.head h1 a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+.tagline {
+  font-size: 8pt;
+  text-align: right;
+}
