@@ -3,8 +3,9 @@
 .main {
   width: 800px;
   margin: 4px auto;
-  border: solid 2px #700;
   background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
 }
 
 .article {
