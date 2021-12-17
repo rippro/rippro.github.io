@@ -11,7 +11,7 @@ const IndexArticles: VFC = () => {
     <div className={articleStyles.article}>
       <div className={styles.section}>
         <h2>入部希望の方へ</h2>
-        新入生のみなさん、ご入学おめでとうございます！
+        新入生のみなさん、ご入学おめでとうございます!
         <br />
         新入生に限らず、RiPPro に興味がある方は <Link href="/welcome">新歓情報ページ</Link> をご覧ください。
         <br />
