@@ -14,7 +14,8 @@ const AtCoderPage: VFC = () => {
         <div
           style={{
             height: '500px',
-            display: 'block'
+            width: 'max-content',
+            display: 'inline-block'
           }}
         >
           <AtCoderGraph />
