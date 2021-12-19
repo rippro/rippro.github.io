@@ -19,7 +19,14 @@ const getUsersInfo = () => {
 const getUserIDs = () => {
   const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('index')
   const data = sheet.getRange(`A2:A${sheet.getLastRow()}`).getValues()
-  const responseData = data.map((user) => user[0])
+  const responseData = data
+    .map((user) => {
+      if (user[0] == '') {
+        return
+      }
+      return user[0]
+    })
+    .filter((e) => typeof e !== 'undefined')
   return responseData
 }
 
