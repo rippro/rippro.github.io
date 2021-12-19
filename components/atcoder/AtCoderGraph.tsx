@@ -30,7 +30,7 @@ class AtCoderGraph extends React.Component<{}, State> {
   }
   getUsersInfo = () => {
     const url =
-      'https://script.google.com/macros/s/AKfycbyrbKATwoiI2W9CZOydrj46Z9DQY3NYysXoWx_8_DYObC6_c5JRcfPSgmpbZzzgNSWL/exec'
+      'https://script.google.com/macros/s/AKfycbxCUIAch1pPH3mvu0czg01F6w2S_4FjvhDDBBu0oWySDoMjbjy9YdNtnj0SXGb0sMDE/exec'
     this.request(url).then((responseData: any) => {
       const usersInfo: UserInfoType[] = responseData
         .map((data: any) => {
