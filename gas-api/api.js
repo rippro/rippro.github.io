@@ -23,11 +23,10 @@ const getUserIDs = () => {
   return responseData
 }
 
-/* レート更新API */
+/* userInfoシート更新API */
 const saveUserIDs = () => {
-  // シートをクリア
+  // シートを取得
   const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('usersInfo')
-  sheet.clear()
 
   // ユーザIDを取得
   const userIDs = getUserIDs()
@@ -36,7 +35,8 @@ const saveUserIDs = () => {
     return [userID, ACCount]
   })
 
-  // ユーザID, レートをシートに保存
+  // シートをクリアにしてからユーザID, AC Countをシートに保存
+  sheet.clear()
   sheet.getRange(1, 1, userInfo.length, userInfo[0].length).setValues(userInfo)
 }
 
