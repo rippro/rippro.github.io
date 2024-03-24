@@ -1,94 +1,6 @@
 /** @format */
 import detailsStyle from '../styles/details.module.css'
 
-export type EventType = {
-  title: string
-  detail: string
-  date?: 'Day 1' | 'Day 2' | 'Day 3'
-  id: string
-}
-
-// TODO: detailの日時・場所をのフォーマット統一させる
-export const Events: EventType[] = [
-  {
-    title: '立命合宿 2019',
-    date: 'Day 1',
-    detail: '3/5 - 3/7 立命館大学 BKC にて合宿を開催．',
-    id: 'rupc2019'
-  },
-  {
-    title: '会津合宿 2018',
-    date: 'Day 1',
-    detail: '会津大学 9/19 - 9/21 に行われた合宿に参加しました．',
-    id: 'acpc2018'
-  },
-  {
-    title: '立命合宿 2018',
-    date: 'Day 1',
-    detail: '3/26 - 3/28 立命館大学 BKC にて合宿を開催．',
-    id: 'rupc2018'
-  },
-  {
-    title: '会津合宿 2017',
-    date: 'Day 1',
-    detail: '会津大学にて 9/18 - 9/20 に行われた合宿に参加しました．',
-    id: 'acpc2017'
-  },
-  {
-    title: '立命合宿 2017',
-    date: 'Day 1',
-    detail: '3/22 - 3/24 立命館大学 BKC にて合宿を開催しました．',
-    id: 'rupc2017'
-  },
-  {
-    title: '会津合宿 2016',
-    date: 'Day 1',
-    detail: '会津大学にて 9/17 - 9/19 に行われた合宿に参加しました．',
-    id: 'acpc2016'
-  },
-  {
-    title: '立命合宿 2016',
-    date: 'Day 1',
-    detail: '3/6 - 3/8 立命館大学 BKC にて合宿を開催しました．',
-    id: 'rupc2016'
-  },
-  {
-    title: '会津合宿 2015',
-    date: 'Day 1',
-    detail: '会津大学にて 9/21 - 9/23 に行われた合宿に参加しました．',
-    id: 'acpc2015'
-  },
-  {
-    title: '立命合宿 2015',
-    date: 'Day 1',
-    detail: '3/14 - 3/16 立命館大学 BKC にて合宿を開催しました．',
-    id: 'rupc2015'
-  },
-  {
-    title: '立命合宿 2013',
-    date: 'Day 3',
-    detail: '3/11 - 3/13 立命館大学 BKC にて合宿を開催しました．',
-    id: 'rupc2013'
-  },
-  {
-    title: '会津合宿 2012',
-    date: 'Day 1',
-    detail: '会津大学にて9/3 - 9/5に行われた合宿に参加しました．',
-    id: 'acpc2012'
-  },
-  {
-    title: '立命合宿 2012',
-    date: 'Day 3',
-    detail: '3/13 - 3/15 立命館大学 BKC にて合宿を開催しました．',
-    id: 'rupc2012'
-  },
-  {
-    title: '立命館プログラミングコンテスト2011',
-    detail: '10/15 立命館大学 BKC にてコンテストを開催しました.',
-    id: 'rupc2011'
-  }
-]
-
 type problemSetType = {
   college: string
   link: string
@@ -119,7 +31,7 @@ export type EventDetailType = {
   judge?: string
   iodata?: JSX.Element
   schedule?: JSX.Element
-  place?: string
+  place: string
   otherContent?: otherContentType[]
 }
 
@@ -158,7 +70,8 @@ export const EventDetails: EventDetailsType = {
       { title: 'E: LISum', link: 'E.pdf' },
       { title: 'F: Absum', link: 'F.pdf' },
       { title: 'G: イルミネーション', link: 'G.pdf' }
-    ]
+    ],
+    place: '立命館大学 BKC'
   },
   acpc2018: {
     title: '会津合宿 2018',
@@ -192,7 +105,8 @@ export const EventDetails: EventDetailsType = {
       { title: 'F: Swap', link: 'F.pdf' },
       { title: 'G: 式の切り取り', link: 'G.pdf' },
       { title: 'H: 板', link: 'H.pdf' }
-    ]
+    ],
+    place: '会津大学'
   },
   rupc2018: {
     title: '立命合宿 2018',
@@ -225,7 +139,8 @@ export const EventDetails: EventDetailsType = {
       { title: 'E: いたずらされたグラフ', link: 'E.pdf' },
       { title: 'F: ごちうさ数', link: 'F.pdf' },
       { title: 'G: エレベータ', link: 'G.pdf' }
-    ]
+    ],
+    place: '立命館大学 BKC'
   },
   acpc2017: {
     title: '会津合宿 2017',
@@ -248,7 +163,8 @@ export const EventDetails: EventDetailsType = {
       { title: 'E: 敵襲から守れ', link: 'E.pdf' },
       { title: 'F: 階段', link: 'F.pdf' },
       { title: 'G: 鍵', link: 'G.pdf' }
-    ]
+    ],
+    place: '会津大学'
   },
   rupc2017: {
     title: '立命合宿 2017',
@@ -276,7 +192,8 @@ export const EventDetails: EventDetailsType = {
       { title: 'I: Islands Survival', link: 'I.pdf' },
       { title: 'J: エナジードリンク', link: 'J.pdf' },
       { title: 'K: AORイカちゃんの成績', link: 'K.pdf' }
-    ]
+    ],
+    place: '立命館大学 BKC'
   },
   acpc2016: {
     title: '会津合宿 2016',
@@ -300,7 +217,8 @@ export const EventDetails: EventDetailsType = {
       { title: 'E: 札', link: 'E.pdf' },
       { title: 'F: 紙の折りたたみ', link: 'F.pdf' },
       { title: 'G: DAGトリオ(Hard)', link: 'G.pdf' }
-    ]
+    ],
+    place: '会津大学'
   },
   rupc2016: {
     title: '立命合宿 2016',
@@ -323,7 +241,8 @@ export const EventDetails: EventDetailsType = {
       { title: 'F: リレー', link: 'F.pdf' },
       { title: '別解', link: 'F_tm.pdf' },
       { title: 'G: 塗るだけ', link: 'G.pdf' }
-    ]
+    ],
+    place: '立命館大学 BKC'
   },
   acpc2015: {
     title: '会津合宿 2015',
@@ -332,7 +251,6 @@ export const EventDetails: EventDetailsType = {
       begin: '2015/9/21',
       end: '2015/9/23'
     },
-    detailURL: '',
     problemSet: [
       { college: 'Day1(立命館大学)', link: '' },
       { college: 'Day2(会津大学)', link: '' },
@@ -345,7 +263,8 @@ export const EventDetails: EventDetailsType = {
       { title: 'D: 市松模様', link: 'D.pdf' },
       { title: 'E: 台風', link: 'E.pdf' },
       { title: 'F: 卵', link: 'F.pdf' }
-    ]
+    ],
+    place: '会津大学'
   },
   rupc2015: {
     title: '立命合宿 2015',
@@ -372,7 +291,7 @@ export const EventDetails: EventDetailsType = {
     ],
     picture: 'rupc2015.png',
     judge: 'http://judge.u-aizu.ac.jp/onlinejudge/index.jsp',
-    place: '立命館大学BKC',
+    place: '立命館大学 BKC',
     schedule: (
       <table className={detailsStyle.table}>
         <thead>
@@ -451,7 +370,6 @@ export const EventDetails: EventDetailsType = {
       begin: '2013/3/11',
       end: '2013/3/13'
     },
-    detailURL: 'http://kokucheese.com/event/index/72089',
     problemSet: [
       { college: 'Day1(会津大学)', link: '' },
       { college: 'Day2(大阪大学)', link: '' },
@@ -467,7 +385,7 @@ export const EventDetails: EventDetailsType = {
       { title: 'G: Computer Onesan', link: '' }
     ],
     judge: 'http://judge.u-aizu.ac.jp/onlinejudge/index.jsp',
-    place: '立命館大学',
+    place: '立命館大学 BKC',
     schedule: (
       <table className={detailsStyle.table}>
         <thead>
@@ -555,7 +473,8 @@ export const EventDetails: EventDetailsType = {
       { title: 'E: マークアップ言語は衰退しました', link: 'E.pdf' },
       { title: 'F: 透明な麻雀牌', link: 'F.pdf' },
       { title: 'G: コードアートオンライン', link: 'G.pdf' }
-    ]
+    ],
+    place: '会津大学'
   },
   rupc2012: {
     title: '立命合宿 2012',
@@ -578,7 +497,8 @@ export const EventDetails: EventDetailsType = {
       { title: 'E: Elevator', link: 'D.pdf' },
       { title: 'F: Icy Composer', link: 'E.pdf' },
       { title: 'G: Satan Attacks', link: 'F.pdf' }
-    ]
+    ],
+    place: '立命館大学 BKC'
   },
   rupc2011: {
     title: '立命館プログラミングコンテスト2011',
@@ -604,6 +524,7 @@ export const EventDetails: EventDetailsType = {
       { title: '問題H: Oh, My Goat!', link: 'H.pdf' },
       { title: '問題I: カスタムペイント職人', link: 'I.pdf' }
     ],
+    place: '立命館大学 BKC',
     iodata: (
       <a href="dataset.zip" download>
         データセット
@@ -612,3 +533,24 @@ export const EventDetails: EventDetailsType = {
     writer: ['shirokurostone', 'kioa341', 'slip0110', 'epee_noir', 'Respect2D', '_shnyh']
   }
 }
+
+export type EventType = {
+  title: string
+  detail: string
+  date?: 'Day 1' | 'Day 2' | 'Day 3'
+  id: string
+}
+
+export const Events: EventType[] = Object.keys(EventDetails).map((id) => {
+  const event: EventDetailType = EventDetails[id]
+  const date = event.date?.begin && event.date?.end ? `${event.date.begin} - ${event.date.end}` : event.date?.begin
+  const detail = event.place.includes('立命')
+    ? `${event.place} にて ${date} 合宿を開催しました．`
+    : `${event.place} にて ${date} 合宿に参加しました．`
+  return {
+    title: event.title,
+    detail: detail,
+    date: event.day,
+    id: id
+  }
+})
