@@ -3,7 +3,7 @@
 import { VFC } from 'react'
 import Link from 'next/link'
 
-import styles from './section.module.css'
+import styles from '../styles/section.module.css'
 import articleStyles from './IndexArticles.module.css'
 
 const IndexArticles: VFC = () => {

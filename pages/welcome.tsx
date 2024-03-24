@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { Layout } from '../components/Layout'
 import YouTube from 'react-youtube'
 
-import styles from '../components/section.module.css'
+import styles from '../styles/section.module.css'
 import welcomeStyles from '../styles/welcome.module.css'
 
 const Welcome: VFC = () => {

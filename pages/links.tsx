@@ -4,7 +4,7 @@ import { VFC } from 'react'
 import { Layout } from '../components/Layout'
 import { SectionType, LinksType, sections } from '../components/Links'
 
-import styles from '../components/section.module.css'
+import styles from '../styles/section.module.css'
 
 const LinkSection: VFC<SectionType> = (Props: SectionType): JSX.Element => {
   return (

@@ -3,7 +3,7 @@
 import { VFC } from 'react'
 import { Layout } from '../components/Layout'
 import AtCoderGraph from '../components/atcoder/AtCoderGraph'
-import styles from '../components/section.module.css'
+import styles from '../styles/section.module.css'
 
 const AtCoderPage: VFC = () => {
   return (
