@@ -3,7 +3,7 @@
 import { VFC } from 'react'
 import { Timeline } from 'react-twitter-widgets'
 
-import styles from './section.module.css'
+import styles from '../styles/section.module.css'
 
 const Header: VFC = () => {
   return (

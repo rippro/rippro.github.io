@@ -4,13 +4,16 @@ import { VFC } from 'react'
 import { Layout } from '../components/Layout'
 import Twitter from '../components/Twitter'
 
-import styles from '../components/section.module.css'
+import styles from '../styles/section.module.css'
 
 const Contact: VFC = () => {
   return (
-    <Layout title="Contact - RiPPro(立命館大学情報理工学部プロジェクト団体)" description="RiPProへのコンタクトページ">
+    <Layout
+      title="お問い合わせ - RiPPro(立命館大学情報理工学部プロジェクト団体)"
+      description="RiPProへのコンタクトページ"
+    >
       <div className={styles.section}>
-        <h2>Contact</h2>
+        <h2>お問い合わせ</h2>
         <h3>連絡先</h3>
         入部希望者または質問等がある方は，名前・学部学科・回生を明記の上，下記のメールアドレスにメールをしていただくか，
         下記のRiPProのTwitter公式アカウントにDMしてください．

@@ -5,13 +5,13 @@ import Link from 'next/link'
 import { Layout } from '../../components/Layout'
 import { EventType, Events } from '../../components/EventList'
 
-import styles from '../../components/section.module.css'
+import styles from '../../styles/section.module.css'
 import eventStyles from '../../styles/event.module.css'
 
 const Event: VFC = () => {
   return (
     <Layout
-      title="Event - RiPPro(立命館大学情報理工学部プロジェクト団体)"
+      title="解説 - RiPPro(立命館大学情報理工学部プロジェクト団体)"
       description="過去に開催したイベント一覧ページ"
     >
       {Events.map((event: EventType) => {
