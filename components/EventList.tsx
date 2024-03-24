@@ -332,7 +332,6 @@ export const EventDetails: EventDetailsType = {
       begin: '2015/9/21',
       end: '2015/9/23'
     },
-    detailURL: '',
     problemSet: [
       { college: 'Day1(立命館大学)', link: '' },
       { college: 'Day2(会津大学)', link: '' },
@@ -451,7 +450,6 @@ export const EventDetails: EventDetailsType = {
       begin: '2013/3/11',
       end: '2013/3/13'
     },
-    detailURL: 'http://kokucheese.com/event/index/72089',
     problemSet: [
       { college: 'Day1(会津大学)', link: '' },
       { college: 'Day2(大阪大学)', link: '' },
