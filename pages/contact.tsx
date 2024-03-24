@@ -4,7 +4,7 @@ import { VFC } from 'react'
 import { Layout } from '../components/Layout'
 import Twitter from '../components/Twitter'
 
-import styles from '../components/section.module.css'
+import styles from '../styles/section.module.css'
 
 const Contact: VFC = () => {
   return (

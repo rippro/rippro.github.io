@@ -6,7 +6,7 @@ import { Layout } from '../../components/Layout'
 import { EventDetails, EventDetailType } from '../../components/EventList'
 import { useState, useEffect } from 'react'
 
-import styles from '../../components/section.module.css'
+import styles from '../../styles/section.module.css'
 import detailsStyle from '../../styles/details.module.css'
 
 const defaultId = 'rupc2018'
