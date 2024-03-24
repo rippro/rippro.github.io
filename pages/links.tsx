@@ -28,7 +28,7 @@ const LinkSection: VFC<SectionType> = (Props: SectionType): JSX.Element => {
 const Links: VFC = () => {
   return (
     <Layout
-      title="Links - RiPPro(立命館大学情報理工学部プロジェクト団体)"
+      title="リンク - RiPPro(立命館大学情報理工学部プロジェクト団体)"
       description="他サイトへのリンクを記載したページ"
     >
       <div className={styles.section}>

@@ -19,7 +19,7 @@ const Welcome: VFC = () => {
 
   const isCourceOpen: boolean = courseDateStart < currentDate && currentDate < courseDateEnd
   return (
-    <Layout title="Welcome - RiPPro(立命館大学情報理工学部プロジェクト団体)" description="新歓用ページ">
+    <Layout title="新歓情報 - RiPPro(立命館大学情報理工学部プロジェクト団体)" description="新歓用ページ">
       <div className={`${styles.section} ${welcomeStyles.line}`}>
         <h2>プログラミング(C++)講習会</h2>
         <p>プログラミングに関する講習会を私たちの団体で実施します。</p>
@@ -105,7 +105,7 @@ const Welcome: VFC = () => {
         </div>
         <h2>連絡先</h2>
         <div className={welcomeStyles.bottom}>
-          入部希望者または質問等がある方は，<Link href="/contact">Contactページ</Link>にアクセスしてください。
+          入部希望者または質問等がある方は，<Link href="/contact">お問い合わせ</Link>にアクセスしてください。
         </div>
       </div>
     </Layout>
