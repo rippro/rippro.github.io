@@ -28,7 +28,7 @@ export type EventDetailType = {
   commentary: problemType[]
   writer?: string[]
   picture?: string
-  judge?: string
+  judge: string
   iodata?: JSX.Element
   schedule?: JSX.Element
   place: string
@@ -47,6 +47,7 @@ export const EventDetails: EventDetailsType = {
       begin: '2019/3/5',
       end: '2019/3/7'
     },
+    judge: 'http://judge.u-aizu.ac.jp/onlinejudge/index.jsp',
     problemSet: [
       {
         college: 'Day 1 (立命館大学)',
@@ -80,6 +81,7 @@ export const EventDetails: EventDetailsType = {
       begin: '2018/9/19',
       end: '2018/9/21'
     },
+    judge: 'http://judge.u-aizu.ac.jp/onlinejudge/index.jsp',
     detailURL: 'https://web.archive.org/web/20190321162010/https://atnd.org/events/98718',
     problemSet: [
       {
@@ -115,6 +117,7 @@ export const EventDetails: EventDetailsType = {
       begin: '2018/3/26',
       end: '2018/3/28'
     },
+    judge: 'http://judge.u-aizu.ac.jp/onlinejudge/index.jsp',
     detailURL: 'https://web.archive.org/web/20180202123544/https://atnd.org/events/94033',
     problemSet: [
       {
@@ -149,10 +152,11 @@ export const EventDetails: EventDetailsType = {
       begin: '2017/9/18',
       end: '2017/9/20'
     },
+    judge: 'http://judge.u-aizu.ac.jp/onlinejudge/index.jsp',
     problemSet: [
-      { college: 'Day1(立命館大学)', link: '' },
-      { college: 'Day2(会津大学)', link: '' },
-      { college: 'Day3(北海道大学)', link: '' }
+      { college: 'Day1(立命館大学)', link: 'https://onlinejudge.u-aizu.ac.jp/beta/room.html#ACPC2017Day1' },
+      { college: 'Day2(会津大学)', link: 'https://onlinejudge.u-aizu.ac.jp/beta/room.html#ACPC2017Day2' },
+      { college: 'Day3(北海道大学)', link: 'https://onlinejudge.u-aizu.ac.jp/beta/room.html#ACPC2017Day3' }
     ],
     commentary: [
       { title: '全体講評', link: 'kohyo.pdf' },
@@ -175,9 +179,12 @@ export const EventDetails: EventDetailsType = {
     },
     detailURL: 'https://web.archive.org/web/20181205111517/https://atnd.org/events/85691',
     problemSet: [
-      { college: 'Day 1 (立命館大学 & 大阪大学)', link: '' },
-      { college: 'Day 2 (会津大学さん)', link: '' },
-      { college: 'Day 3 (北海道大学さん)', link: '' }
+      {
+        college: 'Day 1 (立命館大学 & 大阪大学)',
+        link: 'https://onlinejudge.u-aizu.ac.jp/beta/room.html#RitsCamp17Day1'
+      },
+      { college: 'Day 2 (会津大学さん)', link: 'https://onlinejudge.u-aizu.ac.jp/beta/room.html#RitsCamp17Day2' },
+      { college: 'Day 3 (北海道大学さん)', link: 'https://onlinejudge.u-aizu.ac.jp/beta/room.html#RitsCamp17Day3' }
     ],
     commentary: [
       { title: '全体講評', link: 'kohyo.pdf' },
@@ -202,11 +209,12 @@ export const EventDetails: EventDetailsType = {
       begin: '2016/9/17',
       end: '2016/9/19'
     },
+    judge: 'http://judge.u-aizu.ac.jp/onlinejudge/index.jsp',
     detailURL: 'https://web.archive.org/web/20200326193543/https://atnd.org/events/79743',
     problemSet: [
-      { college: 'Day1(立命館大学)', link: '' },
-      { college: 'Day2(会津大学)', link: '' },
-      { college: 'Day3(北海道大学)', link: '' }
+      { college: 'Day1(立命館大学)', link: 'https://onlinejudge.u-aizu.ac.jp/beta/room.html#ACPC2016Day1' },
+      { college: 'Day2(会津大学)', link: 'https://onlinejudge.u-aizu.ac.jp/beta/room.html#ACPC2016Day2' },
+      { college: 'Day3(北海道大学)', link: 'https://onlinejudge.u-aizu.ac.jp/beta/room.html#RitsCamp16Day3' }
     ],
     commentary: [
       { title: '全体講評', link: 'kohyo.pdf' },
@@ -227,10 +235,11 @@ export const EventDetails: EventDetailsType = {
       begin: '2016/3/6',
       end: '2016/3/8'
     },
+    judge: 'http://judge.u-aizu.ac.jp/onlinejudge/index.jsp',
     problemSet: [
-      { college: 'Day 1 (立命館大学)', link: '' },
-      { college: 'Day 2 (会津大学さん)', link: '' },
-      { college: 'Day 3 (北海道大学さん)', link: '' }
+      { college: 'Day 1 (立命館大学)', link: 'https://onlinejudge.u-aizu.ac.jp/beta/room.html#RitsCamp16Day1' },
+      { college: 'Day 2 (会津大学さん)', link: 'https://onlinejudge.u-aizu.ac.jp/beta/room.html#RitsCamp16Day2' },
+      { college: 'Day 3 (北海道大学さん)', link: 'https://onlinejudge.u-aizu.ac.jp/beta/room.html#RitsCamp16Day3' }
     ],
     commentary: [
       { title: 'A: 秤', link: 'A.pdf' },
@@ -251,10 +260,12 @@ export const EventDetails: EventDetailsType = {
       begin: '2015/9/21',
       end: '2015/9/23'
     },
+    detailURL: '',
+    judge: 'http://judge.u-aizu.ac.jp/onlinejudge/index.jsp',
     problemSet: [
-      { college: 'Day1(立命館大学)', link: '' },
-      { college: 'Day2(会津大学)', link: '' },
-      { college: 'Day3(北海道大学)', link: '' }
+      { college: 'Day1(立命館大学)', link: 'https://onlinejudge.u-aizu.ac.jp/beta/room.html#ACPC2015Day1' },
+      { college: 'Day2(会津大学)', link: 'https://onlinejudge.u-aizu.ac.jp/beta/room.html#ACPC2015Day2' },
+      { college: 'Day3(北海道大学)', link: 'https://onlinejudge.u-aizu.ac.jp/beta/room.html#ACPC2015Day3' }
     ],
     commentary: [
       { title: 'A: 指折り数えて', link: 'A.pdf' },
@@ -275,9 +286,9 @@ export const EventDetails: EventDetailsType = {
     },
     detailURL: 'https://web.archive.org/web/20150928232752/https://atnd.org/events/62742',
     problemSet: [
-      { college: 'Day1(立命館大学)', link: '' },
-      { college: 'Day2(会津大学)', link: '' },
-      { college: 'Day3(北海道大学)', link: '' }
+      { college: 'Day1(立命館大学)', link: 'https://onlinejudge.u-aizu.ac.jp/beta/room.html#RitsCamp15Day1' },
+      { college: 'Day2(会津大学)', link: 'https://onlinejudge.u-aizu.ac.jp/beta/room.html#RitsCamp15Day2' },
+      { college: 'Day3(北海道大学)', link: 'https://onlinejudge.u-aizu.ac.jp/beta/room.html#RitsCamp15Day3' }
     ],
     commentary: [
       { title: '総評', link: 'all.pdf' },
@@ -371,9 +382,9 @@ export const EventDetails: EventDetailsType = {
       end: '2013/3/13'
     },
     problemSet: [
-      { college: 'Day1(会津大学)', link: '' },
-      { college: 'Day2(大阪大学)', link: '' },
-      { college: 'Day3(立命館大学)', link: '' }
+      { college: 'Day1(会津大学)', link: 'https://onlinejudge.u-aizu.ac.jp/beta/room.html#RitsCamp13Day1' },
+      { college: 'Day2(大阪大学)', link: 'https://onlinejudge.u-aizu.ac.jp/beta/room.html#RitsCamp13Day2' },
+      { college: 'Day3(立命館大学)', link: 'https://onlinejudge.u-aizu.ac.jp/beta/room.html#RitsCamp13Day3' }
     ],
     commentary: [
       { title: 'A: Grid Mori', link: '' },
@@ -460,10 +471,11 @@ export const EventDetails: EventDetailsType = {
       begin: '2012/9/3',
       end: '2012/9/5'
     },
+    judge: 'http://judge.u-aizu.ac.jp/onlinejudge/index.jsp',
     problemSet: [
-      { college: 'Day1(立命館大学)', link: '' },
-      { college: 'Day2(会津大学)', link: '' },
-      { college: 'Day3(会津大学)', link: '' }
+      { college: 'Day1(立命館大学)', link: 'https://onlinejudge.u-aizu.ac.jp/beta/room.html#ACPC2012Day1' },
+      { college: 'Day2(会津大学)', link: 'https://onlinejudge.u-aizu.ac.jp/beta/room.html#ACPC2012Day2' },
+      { college: 'Day3(会津大学)', link: 'https://onlinejudge.u-aizu.ac.jp/beta/room.html#ACPC2012Day3' }
     ],
     commentary: [
       { title: 'A: フリック入力', link: 'A.pdf' },
@@ -485,9 +497,9 @@ export const EventDetails: EventDetailsType = {
     },
     judge: 'http://judge.u-aizu.ac.jp/onlinejudge/index.jsp',
     problemSet: [
-      { college: 'Day1(会津大学)', link: '' },
-      { college: 'Day2(大阪大学)', link: '' },
-      { college: 'Day3(立命館大学)', link: '' }
+      { college: 'Day1(会津大学)', link: 'https://onlinejudge.u-aizu.ac.jp/beta/room.html#RitsCamp12Day1' },
+      { college: 'Day2(大阪大学)', link: 'https://onlinejudge.u-aizu.ac.jp/beta/room.html#RitsCamp12Day2' },
+      { college: 'Day3(立命館大学)', link: 'https://onlinejudge.u-aizu.ac.jp/beta/room.html#RitsCamp12Day3' }
     ],
     commentary: [
       { title: 'A: Chicken or the Egg', link: 'kohyo.pdf' },
