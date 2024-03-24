@@ -11,7 +11,7 @@ import eventStyles from '../../styles/event.module.css'
 const Event: VFC = () => {
   return (
     <Layout
-      title="Event - RiPPro(立命館大学情報理工学部プロジェクト団体)"
+      title="解説 - RiPPro(立命館大学情報理工学部プロジェクト団体)"
       description="過去に開催したイベント一覧ページ"
     >
       {Events.map((event: EventType) => {

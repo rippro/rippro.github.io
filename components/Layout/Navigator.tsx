@@ -13,7 +13,7 @@ const Navigator: VFC = () => {
     <Stack spacing={1} direction="row">
       <Link href="/">
         <Button variant="text" className={styles.navibutton}>
-          Top
+          トップ
         </Button>
       </Link>
       <Link href="/welcome">
@@ -23,17 +23,17 @@ const Navigator: VFC = () => {
       </Link>
       <Link href="/event">
         <Button variant="text" className={styles.navibutton}>
-          Event
+          解説
         </Button>
       </Link>
       <Link href="/contact">
         <Button variant="text" className={styles.navibutton}>
-          Contact
+          お問い合わせ
         </Button>
       </Link>
       <Link href="/links">
         <Button variant="text" className={styles.navibutton}>
-          Links
+          リンク
         </Button>
       </Link>
       <Link href="/menbers">
