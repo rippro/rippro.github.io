@@ -116,7 +116,7 @@ export type EventDetailType = {
   commentary: problemType[]
   writer?: string[]
   picture?: string
-  judge?: string
+  judge: string
   iodata?: JSX.Element
   schedule?: JSX.Element
   place?: string
@@ -135,6 +135,7 @@ export const EventDetails: EventDetailsType = {
       begin: '2019/3/5',
       end: '2019/3/7'
     },
+    judge: 'http://judge.u-aizu.ac.jp/onlinejudge/index.jsp',
     problemSet: [
       {
         college: 'Day 1 (立命館大学)',
@@ -167,6 +168,7 @@ export const EventDetails: EventDetailsType = {
       begin: '2018/9/19',
       end: '2018/9/21'
     },
+    judge: 'http://judge.u-aizu.ac.jp/onlinejudge/index.jsp',
     detailURL: 'https://web.archive.org/web/20190321162010/https://atnd.org/events/98718',
     problemSet: [
       {
@@ -201,6 +203,7 @@ export const EventDetails: EventDetailsType = {
       begin: '2018/3/26',
       end: '2018/3/28'
     },
+    judge: 'http://judge.u-aizu.ac.jp/onlinejudge/index.jsp',
     detailURL: 'https://web.archive.org/web/20180202123544/https://atnd.org/events/94033',
     problemSet: [
       {
@@ -234,6 +237,7 @@ export const EventDetails: EventDetailsType = {
       begin: '2017/9/18',
       end: '2017/9/20'
     },
+    judge: 'http://judge.u-aizu.ac.jp/onlinejudge/index.jsp',
     problemSet: [
       { college: 'Day1(立命館大学)', link: 'https://onlinejudge.u-aizu.ac.jp/beta/room.html#ACPC2017Day1' },
       { college: 'Day2(会津大学)', link: 'https://onlinejudge.u-aizu.ac.jp/beta/room.html#ACPC2017Day2' },
@@ -288,6 +292,7 @@ export const EventDetails: EventDetailsType = {
       begin: '2016/9/17',
       end: '2016/9/19'
     },
+    judge: 'http://judge.u-aizu.ac.jp/onlinejudge/index.jsp',
     detailURL: 'https://web.archive.org/web/20200326193543/https://atnd.org/events/79743',
     problemSet: [
       { college: 'Day1(立命館大学)', link: 'https://onlinejudge.u-aizu.ac.jp/beta/room.html#ACPC2016Day1' },
@@ -312,6 +317,7 @@ export const EventDetails: EventDetailsType = {
       begin: '2016/3/6',
       end: '2016/3/8'
     },
+    judge: 'http://judge.u-aizu.ac.jp/onlinejudge/index.jsp',
     problemSet: [
       { college: 'Day 1 (立命館大学)', link: 'https://onlinejudge.u-aizu.ac.jp/beta/room.html#RitsCamp16Day1' },
       { college: 'Day 2 (会津大学さん)', link: 'https://onlinejudge.u-aizu.ac.jp/beta/room.html#RitsCamp16Day2' },
@@ -336,6 +342,7 @@ export const EventDetails: EventDetailsType = {
       end: '2015/9/23'
     },
     detailURL: '',
+    judge: 'http://judge.u-aizu.ac.jp/onlinejudge/index.jsp',
     problemSet: [
       { college: 'Day1(立命館大学)', link: 'https://onlinejudge.u-aizu.ac.jp/beta/room.html#ACPC2015Day1' },
       { college: 'Day2(会津大学)', link: 'https://onlinejudge.u-aizu.ac.jp/beta/room.html#ACPC2015Day2' },
@@ -545,6 +552,7 @@ export const EventDetails: EventDetailsType = {
       begin: '2012/9/3',
       end: '2012/9/5'
     },
+    judge: 'http://judge.u-aizu.ac.jp/onlinejudge/index.jsp',
     problemSet: [
       { college: 'Day1(立命館大学)', link: 'https://onlinejudge.u-aizu.ac.jp/beta/room.html#ACPC2012Day1' },
       { college: 'Day2(会津大学)', link: 'https://onlinejudge.u-aizu.ac.jp/beta/room.html#ACPC2012Day2' },
