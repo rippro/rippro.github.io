@@ -178,6 +178,7 @@ export const EventDetails: EventDetailsType = {
       end: '2017/3/24'
     },
     detailURL: 'https://web.archive.org/web/20181205111517/https://atnd.org/events/85691',
+    judge: 'http://judge.u-aizu.ac.jp/onlinejudge/index.jsp',
     problemSet: [
       {
         college: 'Day 1 (立命館大学 & 大阪大学)',
