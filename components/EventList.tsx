@@ -147,10 +147,10 @@ export const EventDetails: EventDetailsType = {
       }
     ],
     commentary: [
-      { title: 'A: Empire of the BIWAKO', link: '' },
-      { title: 'B: Goodbye, BKC', link: '' },
+      { title: 'A: Empire of the BIWAKO', link: 'A_Empire_of_the_BIWAKO.pdf' },
+      { title: 'B: Goodbye, BKC', link: 'B_Goobye_BKC.pdf' },
       { title: 'C: Belt-line Bus Trip', link: '' },
-      { title: 'D: 2xL Minesweeper', link: '' },
+      { title: 'D: 2xL Minesweeper', link: 'D_2xL_minesweeper.pdf' },
       { title: 'E: palindromic?', link: '' },
       { title: 'F: MOD Party', link: '' },
       { title: 'G: Skating', link: '' },
