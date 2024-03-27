@@ -149,13 +149,13 @@ export const EventDetails: EventDetailsType = {
     commentary: [
       { title: 'A: Empire of the BIWAKO', link: 'A_Empire_of_the_BIWAKO.pdf' },
       { title: 'B: Goodbye, BKC', link: 'B_Goobye_BKC.pdf' },
-      { title: 'C: Belt-line Bus Trip', link: '' },
+      { title: 'C: Belt-line Bus Trip', link: 'C_Belt-line_bus_trip.pdf' },
       { title: 'D: 2xL Minesweeper', link: 'D_2xL_minesweeper.pdf' },
-      { title: 'E: palindromic?', link: '' },
-      { title: 'F: MOD Party', link: '' },
-      { title: 'G: Skating', link: '' },
-      { title: 'H: miNIMum', link: '' },
-      { title: 'I: jucumber', link: '' }
+      { title: 'E: palindromic?', link: 'E_palindromic.pdf' },
+      { title: 'F: MOD Party', link: 'F_MOD_party.pdf' },
+      { title: 'G: Skating', link: 'G_Skating.pdf' },
+      { title: 'H: miNIMum', link: 'H_miNIMum.pdf' },
+      { title: 'I: jucumber', link: 'I_jucumber.pdf' }
     ]
   },
   rupc2019: {
