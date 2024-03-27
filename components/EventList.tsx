@@ -40,6 +40,36 @@ type EventDetailsType = {
 }
 
 export const EventDetails: EventDetailsType = {
+  rupc2024: {
+    title: '立命合宿 2024',
+    day: 'Day 1',
+    date: {
+      begin: '2024/3/23',
+      end: '2024/3/24'
+    },
+    detailURL: 'https://rippro.connpass.com/event/309923/',
+    problemSet: [
+      {
+        college: 'Day 1 (立命館大学)',
+        link: 'https://onlinejudge.u-aizu.ac.jp/beta/room.html#RUPC2024Day1'
+      },
+      {
+        college: 'Day 2 (会津大学さん)',
+        link: 'https://onlinejudge.u-aizu.ac.jp/beta/room.html#RUPC2024Day2'
+      }
+    ],
+    commentary: [
+      { title: 'A: Empire of the BIWAKO', link: 'A_Empire_of_the_BIWAKO.pdf' },
+      { title: 'B: Goodbye, BKC', link: 'B_Goobye_BKC.pdf' },
+      { title: 'C: Belt-line Bus Trip', link: 'C_Belt-line_bus_trip.pdf' },
+      { title: 'D: 2xL Minesweeper', link: 'D_2xL_minesweeper.pdf' },
+      { title: 'E: palindromic?', link: 'E_palindromic.pdf' },
+      { title: 'F: MOD Party', link: 'F_MOD_party.pdf' },
+      { title: 'G: Skating', link: 'G_Skating.pdf' },
+      { title: 'H: miNIMum', link: 'H_miNIMum.pdf' },
+      { title: 'I: jucumber', link: 'I_jucumber.pdf' }
+    ]
+  },
   rupc2019: {
     title: '立命合宿 2019',
     day: 'Day 1',
