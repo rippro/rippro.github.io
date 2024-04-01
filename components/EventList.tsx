@@ -47,6 +47,7 @@ export const EventDetails: EventDetailsType = {
       begin: '2024/3/23',
       end: '2024/3/24'
     },
+    judge: 'http://judge.u-aizu.ac.jp/onlinejudge/index.jsp',
     detailURL: 'https://rippro.connpass.com/event/309923/',
     problemSet: [
       {
@@ -68,7 +69,8 @@ export const EventDetails: EventDetailsType = {
       { title: 'G: Skating', link: 'G_Skating.pdf' },
       { title: 'H: miNIMum', link: 'H_miNIMum.pdf' },
       { title: 'I: jucumber', link: 'I_jucumber.pdf' }
-    ]
+    ],
+    place: '立命館大学 BKC'
   },
   rupc2019: {
     title: '立命合宿 2019',
