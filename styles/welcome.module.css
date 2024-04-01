@@ -20,8 +20,25 @@
 
 .list {
   list-style: none;
+  display: block;
+  padding-left: 0;
 }
 
 .bottom {
   margin-bottom: 1em;
+}
+
+.flyer {
+  justify-content: flex-end;
+  display: flex;
+  position: relative;
+  padding-right: 2%;
+}
+.workshop {
+  position: absolute;
+}
+.p {
+  float: right;
+  font-size: small;
+  padding-right: 2%;
 }
