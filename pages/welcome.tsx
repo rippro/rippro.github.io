@@ -8,6 +8,7 @@ import YouTube from 'react-youtube'
 import styles from '../styles/section.module.css'
 import welcomeStyles from '../styles/welcome.module.css'
 import flyer from '../public/RiPPro_Ad.png'
+import Discord from '../components/discord'
 
 const Welcome: VFC = () => {
   const currentDate = new Date()
@@ -15,7 +16,7 @@ const Welcome: VFC = () => {
   const courseDateStart = new Date(`${currentDate.getFullYear()}/5/11`)
   const courseDateEnd = new Date(`${currentDate.getFullYear()}/7/31`)
   const coueseWeek = ['月', '水']
-  const workshopDate = '4/16(火)'
+  const workshopDate = '2024/4/16(火)'
   const coursePlace = 'OIC H221教室'
   const courseTime = '16:20〜17:05'
 
@@ -23,9 +24,11 @@ const Welcome: VFC = () => {
   return (
     <Layout title="新歓情報 - RiPPro(立命館大学情報理工学部プロジェクト団体)" description="新歓用ページ">
       <div className={`${styles.section} ${welcomeStyles.line}`}>
+        <h2>新歓Discordサーバー</h2>
+        <Discord />
         <h2>新歓講演会</h2>
         <div className={welcomeStyles.workshop}>
-          <p>私たちRipRroの普段の活動内容や配布したビラの問題の解説などを行います！</p>
+          <p>私たちRiPRroの普段の活動内容や配布したビラの問題の解説などを行います！</p>
           <p>どこの学部の方でもでも歓迎するので気軽に参加してください。</p>
           <ul className={welcomeStyles.list}>
             <li>日程 : {workshopDate}</li>
@@ -37,14 +40,33 @@ const Welcome: VFC = () => {
           <img src={flyer.src} width="20%" alt="" />
         </a>
         <p className={welcomeStyles.p}>クリックで拡大画像を表示</p>
-        <h2>競プロ講習会</h2>
-        <p>仮入部者に向けて、コンテストについてからプログラムの書き方まで講習します。全３回の予定です！</p>
-        日程,場所等については順次更新予定です.
-        {/* <ul className={welcomeStyles.list}>
-          <li>日程 : 順次更新予定</li>
-          <li>場所 : 順次更新</li>
-          <li>時間 : 順次更新</li>
-        </ul> */}
+        <h2>競プロ新歓講習</h2>
+        <p>仮入部者に向けてプログラムの書き方や、そのプログラムをどうやって競プロに使うのかをゼロから講習します！</p>
+        <p>各回につき2日の日程が用意されていますが、同じ内容をやるのでどちらに参加していただいても大丈夫です!</p>
+        <h3>第1回講習 入門！プログラミング勉強会 #1</h3>
+        <ul className={welcomeStyles.list}>
+          <li>日程 : 4/22(月) 4/23(火) </li>
+          <li>場所 : 更新予定</li>
+          <li>時間 : 16:20~17:50</li>
+        </ul>
+        <h3>第2回講習 実践！競プロ勉強会 #1</h3>
+        <ul className={welcomeStyles.list}>
+          <li>日程 :4/24(水) 4/25(木) </li>
+          <li>場所 : 更新予定</li>
+          <li>時間 : 16:20~17:50</li>
+        </ul>
+        <h3>第3回講習 入門！プログラミング勉強会 #2</h3>
+        <ul className={welcomeStyles.list}>
+          <li>日程 :4/29(月) 4/30(火)</li>
+          <li>場所 : 更新予定</li>
+          <li>時間 : 16:20~17:50</li>
+        </ul>
+        <h3>第4回講習 実践！競プロ勉強会 #2</h3>
+        <ul className={welcomeStyles.list}>
+          <li>日程 :5/1(水) 5/2(木)</li>
+          <li>場所 : 更新予定</li>
+          <li>時間 : 16:20~17:50</li>
+        </ul>
         <h2>RiPProとは</h2>
         <div className={welcomeStyles.line}>
           <p>私たち RiPProは競技プログラミングの能力を高めコンテストでの入賞を目指す団体です。</p>
