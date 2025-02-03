@@ -1,0 +1,64 @@
+---
+import { Image } from 'astro:assets';
+import "@styles/global.css"
+import logo from '@assets/rippro-logo.png';
+---
+<header id="topbar-wrapper" class="flex place-content-center" aria-label="Top Bar">
+  <div
+    id="topbar"
+    class="flex d-flex align-items-center justify-content-between px-lg-3 h-100"
+    >
+    <a id="logo" class="flex-1">
+      <Image 
+       src={logo} 
+       alt="RiPProのロゴ"
+       widths={[200]}/>
+    </a>
+  </div>
+  <ul class="navigation_list flex items-center">
+    <li class="navigation_item"><a href="/">トップ</a></li>
+    <li class="navigation_item"><a href="/news">新歓情報</a></li>
+    <li class="navigation_item"><a href="/explanation">解説</a></li>
+    <li class="navigation_item"><a href="/contact">お問い合わせ</a></li>
+    <li class="navigation_item"><a href="/links">リンク</a></li>
+    <li class="navigation_item"><a href="/members">部員向け</a></li>
+  </ul>
+</header>
+<style is:global>
+  #logo {
+    img{
+        width: 200px;
+        margin: 10px 5px 5px 5px;
+        vertical-align: middle;
+
+    }
+    a:hover {
+      color: #000;
+      text-decoration: underline;
+    }
+    .logo a:visited {
+      text-decoration: none;
+    }
+  }
+</style>
+<style>
+  #topbar-wrapper {
+    border-bottom: 2px solid #700;
+  }
+  .navigation_list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navigation_item {
+    margin: 0 1rem;
+    a {
+      text-decoration: none;
+      color: #007bff;
+    }
+  }
+</style>
+

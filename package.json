@@ -4,10 +4,18 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "NODE_ENV=production astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "prepare": "husky"
+    "prepare": "husky",
+    "format:lint": "eslint . --ext js,jsx,ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "fmt": "prettier --write **/*.{js,jsx,ts,tsx,css,scss,astro}",
+    "fmt:warn": "prettier --l '**/*.{js,jsx,ts,tsx,css,scss,astro}'",
+    "lint:check": "eslint 'src/**/*.{js,jsx,ts,tsx,css,scss,astro}' --report-unused-disable-directives --max-warnings 0 ",
+    "lint:fix": "eslint  --fix 'src/**/*.{js,jsx,ts,tsx,css,scss,astro}' ",
+    "fmt:check": "prettier --check 'src/**/*.{js,jsx,ts,tsx,css,scss,astro}'",
+    "fmt:fix": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,scss,astro}'"
+
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",

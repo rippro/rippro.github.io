@@ -1,0 +1,15 @@
+---
+const { children } = Astro.slots;
+---
+<main class="main-content">
+  <div class="main-content_inner">
+    <slot />
+  </div>
+</main>
+
+<style>
+  .main-content {
+    margin: 0 auto;
+  }
+</style>
+

@@ -1,0 +1,43 @@
+---
+const currentPath = Astro.url.pathname;
+const pathSegments = currentPath.split("/").filter((segment) => segment);
+console.log(pathSegments);
+pathSegments.forEach((seg) => {
+  return (seg = seg + "/");
+});
+---
+
+<div id="navbar-breadcrumb">
+  <nav id="breadcrumb" aria-label="Breadcrumb">
+
+    <span class="flex-3">
+      <a href="/">Home</a>
+    </span>
+    {
+      pathSegments.map((segment, index) => (
+        <span>
+          <a href={`/${pathSegments.slice(0, index + 1).join("/") + "/"}`}>
+            {segment}
+          </a>
+        </span>
+      ))
+    }
+  </nav>
+</div>
+
+
+<style is:global>
+  div#navbar-breadcrumb {
+    @apply text-gray-300;
+  }
+</style>
+<style>
+  div#navbar-breadcrumb {
+    @apply py-2 mb-2;
+  }
+  #navbar-breadcrumb span:not(:last-child)::after {
+    content: "-›";
+    padding: 0 0.3rem;
+  }
+
+</style>

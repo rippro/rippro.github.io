@@ -1,11 +1,32 @@
 ---
-import Welcome from '@components/Welcome.astro';
 import Layout from '@layouts/Layout.astro';
+import MainContent from '@components/MainContent.astro';
+import SectionTitle from '@components/SectionTitle.astro';
+import Paragraph from '@components/Paragraph.astro';
+import List from '@components/List.astro';
+import TwitterEmbed from '@components/TwitterEmbed.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+
+const title= "RiPPro(立命館大学情報理工学部プロジェクト団体)"
 ---
 
-<Layout>
-	<Welcome />
+<Layout title={title}>
+  <div slot="content">
+  <SectionTitle title="入部希望の方へ" />
+  <Paragraph>新入生のみなさん、ご入学おめでとうございます!...</Paragraph>
+
+  <SectionTitle title="ようこそ RiPPro へ" />
+  <Paragraph>立命館大学情報理工学部プロジェクト団体 RiPPro ...</Paragraph>
+
+  <SectionTitle title="ACM-ICPC" />
+  <Paragraph>ACM-ICPC とは国際学会の主催する歴史ある...</Paragraph>
+
+  <SectionTitle title="立命館大学情報理工学部プロジェクト連合" />
+  <Paragraph>情報理工学部では、専門性を活かした課外活動を応援すべく...</Paragraph>
+  <List items={['RiPPro', 'Ri-one', 'RiG++', 'RIST']} type="unordered" />
+
+  <SectionTitle title="Twitter" />
+  <TwitterEmbed username="PJ_RiPPro" />
+  </div>
+
 </Layout>

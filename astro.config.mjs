@@ -27,12 +27,6 @@ export default defineConfig({
     remarkRehype: {
       footnoteLabel: "脚注"
     },
-    shikiConfig: {
-      themes: {
-        light: "catppuccin-frappe", 
-        dark: "catppuccin-macchiato",
-      }
-    }
   },
   prefetch: {
     defaultStrategy: "viewport",
