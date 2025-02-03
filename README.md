@@ -1,34 +1,46 @@
-# Astro Starter Kit: Basics
+# RiPPro の Web サイト
+
+## How to develop
+
+- Install Dependencies
 
 ```sh
-npm create astro@latest -- --template basics
+yarn && yarn prepare
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+- Develop
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+```sh
+yarn dev
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+- Build & Export
+
+```sh
+yarn build && yarn export
+```
+
+## Deploy
+
+GitHub Actions で Push 時に自動デプロイされます．
+
+## コンテンツの追加
+
+それぞれのファイルはここにあります．
+
+```txt
+|--src                          # プロジェクトのソースルートです
+| |--assets                     # 画像など最適化可能なリソースを置く場所
+| |--components                 # ページのパーツ(再利用可能なもの)を置く場所
+| |--contents                   # mdxなどコンテンツとなるmdを置く場所
+| |--layouts                    # ページレイアウトの完成系など大きなコンポーネント
+| |--pages                      # 実際にレンダリングする時のエンドポイント
+| |--styles                     # css置き場
+| |--utils                      # ヘルパー関数置き場
+|--public                       # 最適化不要なファイル置き場
+| |--static
+| | |--contestData/             # ここにRUPC, ACPCなどの解説ファイルなどを置きます
+```
 
 ## 🧞 Commands
 
@@ -43,6 +55,3 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
