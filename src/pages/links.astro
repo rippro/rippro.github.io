@@ -1,0 +1,64 @@
+---
+import Layout from '@layouts/Layout.astro'
+import SectionTitle from '@components/SectionTitle.astro'
+
+const courseDateStart = new Date(`2024/5/11`)
+const courseDateEnd = new Date(`2024/7/31`)
+const coueseWeek = ['月', '水']
+const workshopDate = '2024/4/16(火)'
+const coursePlace = 'OIC H221教室'
+const courseTime = '16:20〜17:05'
+---
+
+<Layout title="リンク">
+  <div slot="content">
+    <article id="dyn-content">
+      <SectionTitle title="ACM_ICPC" />
+      <ul>
+        <li><a href="https://icpc.iisf.or.jp/">ACM-ICPC</a></li>
+        <li><a href="https://jag-icpc.org/">ICPC OB/OG の会</a></li>
+      </ul>
+      <SectionTitle title="立命館大学情報理工学部プロジェクト連合" />
+      <ul>
+        <li><a href="https://rigpp.sakura.ne.jp/wp/">RiG++</a></li>
+        <li><a href="http://rione.org/">Ri-one</a></li>
+        <li><a href="https://risec.github.io/">RiST</a></li>
+      </ul>
+      <SectionTitle title="他大学" />
+      <ul>
+        <li><a href="http://tkbpc.github.io/"> 筑波大学プログラミングコンテスト部 (TPC)@筑波大 </a></li>
+        <li><a href="https://www.kmcjp.com/"> 京大マイコンクラブ (KMC) @ 京大 </a></li>
+        <li>
+          <a href="http://www.tuat.ac.jp/~tuatmcc/index.html">
+            東京農工大学マイクロコンピュータークラブ (MCC) @ 東京農工大
+          </a>
+        </li>
+        <li><a href="http://kyushu-u-icpccc.hatenablog.com/"> ICPC チャレンジ部 (ICPCCC) @ 九大 </a></li>
+        <li>
+          <a href="https://www.kyoto-u.ac.jp/ja/education-campus/education/club/club/club-icpc.html">
+            京都大学プログラミングコンテスト部 (KUPC) @ 京大
+          </a>
+        </li>
+        <li><a href="http://web-ext.u-aizu.ac.jp/circles/acpc/ja/index.html"> 競技プログラミング部 @ 会津大 </a></li>
+      </ul>
+      <SectionTitle title="立命館大学" />
+      <ul>
+        <li><a href="https://www.ritsumei.ac.jp/"> 立命館大学 </a></li>
+        <li><a href="https://www.ritsumei.ac.jp/eng/"> 立命館大学情報理工学部 </a></li>
+        <li><a href="http://www.rcc.ritsumei.ac.jp/"> 立命館大学コンピュータクラブ </a></li>
+      </ul>
+    </article>
+  </div>
+</Layout>
+<style>
+  #dyn-content {
+    ul {
+      list-style-type: none;
+      padding-left: 20px;
+    }
+    a {
+      color: #0000ff;
+      text-decoration: underline;
+    }
+  }
+</style>

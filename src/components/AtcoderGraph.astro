@@ -1,0 +1,100 @@
+---
+const url =
+  'https://script.google.com/macros/s/AKfycbxZEjsW21O2Tg4IqwHZOS8T-JpoRIbyMwBvcvFtZI92LOT6yz-PfFjVdUihBlmZxzsH/exec'
+
+async function getUsersInfo() {
+  try {
+    const res = await fetch(url)
+    const data = await res.json()
+    return data
+      .map((item: any) => ({
+        userID: item.userID,
+        acceptedCount: item.count
+      }))
+      .sort((user1: any, user2: any) => user2.acceptedCount - user1.acceptedCount)
+  } catch (error) {
+    console.error('Fetch Error:', error)
+    return []
+  }
+}
+
+const usersInfo = await getUsersInfo()
+const userIDs = usersInfo.map((userInfo: any) => userInfo.userID)
+const acceptedCounts = usersInfo.map((userInfo: any) => userInfo.acceptedCount)
+
+const options = {
+  chart: {
+    //polar: true,
+    type: 'bar',
+  },
+  title: {
+    text: 'AC Counts'
+  },
+  subtitle: {
+    text: 'Source: <a href="https://kenkoooo.com">https://kenkoooo.com</a>'
+  },
+  pane: {
+    size: '80%'
+  },
+  xAxis: {
+    categories: userIDs,
+    title: {
+      text: null
+    }
+  },
+  yAxis: {
+    title: {
+      text: 'Solved Count'
+    },
+    labels: {
+      format: '{value}'
+    },
+    min: 0
+  },
+  plotOptions: {
+    series: {
+      pointPadding: 0,
+      groupPadding: 0.1,
+      borderWidth: 0,
+      dataLabels: {
+        enabled: true,
+        format: '{y}'
+      }
+    },
+    bar: {
+      borderRadius: 5
+    }
+  },
+  series: [{
+    name: 'Solved',
+    data: acceptedCounts
+  }],
+  credits: {
+    enabled: false
+  }
+};
+
+/*
+<script is:inline define:vars={{ Highcharts, options }}>
+  console.log(Highcharts)
+  document.addEventListener('DOMContentLoaded', () => {
+    Highcharts.chart('atcoder-chart', options)
+  })
+</script>
+*/
+---
+
+<div id="atcoder-chart"></div>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/data.js"></script>
+<script src="https://code.highcharts.com/maps/modules/exporting.src.js"></script>
+<script define:vars={{options}}>
+//import * as Highcharts from 'Highcharts';
+//import * as Exporting from 'Highcharts/modules/exporting';
+//Exporting(Highcharts);
+//console.log(Highcharts);
+document.addEventListener('DOMContentLoaded', () => {
+  Highcharts.chart('atcoder-chart', options)
+})
+</script>
+

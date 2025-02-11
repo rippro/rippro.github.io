@@ -1,27 +1,31 @@
 ---
 export interface Props {
-  items: string[];
-  type: 'ordered' | 'unordered';
+  items: string[]
+  type: 'ordered' | 'unordered'
 }
 
-const { items, type } = Astro.props;
+const { items, type } = Astro.props
 ---
 
 {
   type === 'ordered' ? (
     <ol class="list list--ordered">
-      {items.map((item) => <li>{item}</li>)}
+      {items.map((item) => (
+        <li>{item}</li>
+      ))}
     </ol>
   ) : (
     <ul class="list list--unordered">
-      {items.map((item) => <li>{item}</li>)}
+      {items.map((item) => (
+        <li>{item}</li>
+      ))}
     </ul>
   )
 }
 
 <style>
-.list {
-  margin-bottom: 1rem;
-  padding-left: 20px; /* リストのインデント */
-}
+  .list {
+    margin-bottom: 1rem;
+    padding-left: 20px; /* リストのインデント */
+  }
 </style>

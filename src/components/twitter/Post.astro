@@ -1,0 +1,33 @@
+---
+import { Tweet } from 'astro-embed'
+
+interface Props {
+  url: string
+}
+const { url } = Astro.props
+
+const postURL =
+  url.hostname === 'x.com' || url.hostname === 'www.x.com' ? new URL(url.pathname, 'https://twitter.com') : url
+
+const api = 'https://publish.twitter.com/oembed'
+const uri = new URL(api)
+uri.searchParams.set('url', postURL)
+uri.searchParams.set('omit_script', 'true')
+uri.searchParams.set('dnt', 'true')
+
+const tweet = await fetch(uri.toString())
+  .then<{ html: string }>((res) => res.json())
+  .catch((err) => null)
+---
+
+<script defer src="https://platform.twitter.com/widgets.js"></script>
+
+{
+  tweet && (
+    <>
+      <div>
+        <Tweet id={postURL} data-chrome="noheader nofooter" />
+      </div>
+    </>
+  )
+}

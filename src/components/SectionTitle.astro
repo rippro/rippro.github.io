@@ -1,16 +1,81 @@
 ---
 export interface Props {
-  title: string;
+  title: string
+  level?: 1 | 2 | 3 | 4 | 5 | 6
 }
-const { title } = Astro.props;
+const { title, level = 1 } = Astro.props
 ---
 
-<h2 class="section-title">{title}</h2>
-
+<>
+  {
+    level == 1 && (
+      <>
+        <h1 class="section-title">{title}</h1>
+      </>
+    )
+  }
+  {
+    level == 2 && (
+      <>
+        <h2 class="section-title">{title}</h2>{' '}
+      </>
+    )
+  }
+  {
+    level == 3 && (
+      <>
+        <h3 class="section-title">{title}</h3>{' '}
+      </>
+    )
+  }
+  {
+    level == 4 && (
+      <>
+        <h4 class="section-title">{title}</h4>{' '}
+      </>
+    )
+  }
+  {
+    level == 5 && (
+      <>
+        <h5 class="section-title">{title}</h5>{' '}
+      </>
+    )
+  }
+  {
+    level == 6 && (
+      <>
+        <h6 class="section-title">{title}</h6>{' '}
+      </>
+    )
+  }
+</>
 <style>
-.section-title {
-  border-bottom: 2px solid #007bff; /* 青色 */
-  padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
-}
+  .section-title {
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  h1.section-title {
+    border-bottom: 2px solid #007bff;
+    border-left: 5px solid #337bff;
+    background-color: #add0fd;
+  }
+  h2.section-title {
+    border-bottom: 2px dashed #007bff;
+    background-color: transparent;
+    border-left: 5px solid #337bff;
+  }
+  h3.section-title {
+    /* TODO: implement me */
+  }
+  h4.section-title {
+    /* TODO: implement me */
+  }
+  h5.section-title {
+    /* TODO: implement me */
+  }
+  h6.section-title {
+    /* TODO: implement me */
+  }
 </style>

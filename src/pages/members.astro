@@ -1,0 +1,25 @@
+---
+import Layout from '@layouts/Layout.astro'
+import SectionTitle from '@components/SectionTitle.astro'
+import AtcoderGraph from '@components/AtcoderGraph.astro'
+---
+
+<Layout title="部員向けページ">
+  <div slot="content">
+    <article id="dyn-content">
+      <SectionTitle title="AtCoder進捗どうですか" />
+      <SectionTitle title="Summary" level=2 />
+      <AtcoderGraph />
+    </article>
+  </div>
+</Layout>
+<style>
+  #pj-list {
+    a {
+      color: #007bff;
+    }
+    dd {
+      margin-left: 1rem;
+    }
+  }
+</style>

@@ -1,0 +1,13 @@
+---
+interface Props {
+  id: string
+}
+
+const { id } = Astro.props
+
+const url = 'https://twitter.com/' + id + '?ref_src=twsrc%5Etfw'
+---
+
+<a class="twitter-timeline" data-height="800" data-chrome="noheader nofooter" href={url}></a>
+
+<script src="https://platform.twitter.com/widgets.js"></script>

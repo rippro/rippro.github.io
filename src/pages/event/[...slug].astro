@@ -1,26 +1,107 @@
 ---
-import { getCollection } from "astro:content";
-import type { CollectionEntry } from "astro:content";
+import Layout from '@layouts/Layout.astro'
+
+import { getCollection } from 'astro:content'
+import type { CollectionEntry } from 'astro:content'
 
 export async function getStaticPaths() {
-  const blogEntries = await getCollection("event");
-  return blogEntries.map((entry) => ({
+  const evt = await getCollection('event')
+  return evt.map((entry) => ({
     params: { slug: entry.slug },
-    props: { entry },
-  }));
+    props: { entry }
+  }))
 }
 
 interface Props {
-  entry: CollectionEntry<"tech">;
+  entry: CollectionEntry<'event'>
 }
 
-
-const { entry } = Astro.props;
+const { entry } = Astro.props
 // ToC作成
-const { Content, headings } = await entry.render();
-headings.unshift({ depth: 0, slug: "目次", text: "目次" });
-console.log(headings);
-
+const { Content, headings } = await entry.render()
+headings.unshift({ depth: 0, slug: '目次', text: '目次' })
 ---
 
+<Layout title={entry.title}>
+  <div slot="content">
+    <article id="dyn-content">
+      <Content />
+    </article>
+  </div>
+</Layout>
+<style is:global>
+  article#dyn-content {
+    /*see. @components/SectionTitle.astro*/
+    h1 {
+      @apply text-2xl font-bold;
 
+      border-bottom: 2px solid #007bff;
+      border-left: 5px solid #337bff;
+      background-color: #add0fd;
+
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    /*see. @components/SectionTitle.astro*/
+    h2 {
+      @apply text-xl;
+      border-bottom: 2px solid #007bff;
+      border-left: 5px solid #337bff;
+      background-color: #add0fd;
+
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    /*see. @components/SectionTitle.astro*/
+    h3 {
+      @apply text-lg;
+      border-bottom: 2px solid #007bff;
+      border-left: 5px solid #337bff;
+      background-color: #add0fd;
+
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    /*see. @components/SectionTitle.astro*/
+    h4 {
+      @apply text-base;
+      border-bottom: 2px solid #007bff;
+      border-left: 5px solid #337bff;
+      background-color: #add0fd;
+
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    /*see. @components/SectionTitle.astro*/
+    h5 {
+      @apply text-sm;
+      border-bottom: 2px solid #007bff;
+      border-left: 5px solid #337bff;
+      background-color: #add0fd;
+
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    /*see. @components/SectionTitle.astro*/
+    h6 {
+      @apply text-xs;
+      border-bottom: 2px solid #007bff;
+      border-left: 5px solid #337bff;
+      background-color: #add0fd;
+
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    /*see. @components/Paragraph.astro*/
+    p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+  }
+</style>

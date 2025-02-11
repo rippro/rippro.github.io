@@ -1,30 +1,25 @@
 ---
-const currentPath = Astro.url.pathname;
-const pathSegments = currentPath.split("/").filter((segment) => segment);
-console.log(pathSegments);
+const currentPath = Astro.url.pathname
+const pathSegments = currentPath.split('/').filter((segment) => segment)
 pathSegments.forEach((seg) => {
-  return (seg = seg + "/");
-});
+  return (seg = seg + '/')
+})
 ---
 
 <div id="navbar-breadcrumb">
   <nav id="breadcrumb" aria-label="Breadcrumb">
-
     <span class="flex-3">
       <a href="/">Home</a>
     </span>
     {
       pathSegments.map((segment, index) => (
         <span>
-          <a href={`/${pathSegments.slice(0, index + 1).join("/") + "/"}`}>
-            {segment}
-          </a>
+          <a href={`/${pathSegments.slice(0, index + 1).join('/') + '/'}`}>{segment}</a>
         </span>
       ))
     }
   </nav>
 </div>
-
 
 <style is:global>
   div#navbar-breadcrumb {
@@ -36,8 +31,7 @@ pathSegments.forEach((seg) => {
     @apply py-2 mb-2;
   }
   #navbar-breadcrumb span:not(:last-child)::after {
-    content: "-›";
+    content: '-›';
     padding: 0 0.3rem;
   }
-
 </style>

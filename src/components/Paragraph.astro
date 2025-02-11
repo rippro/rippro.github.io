@@ -1,16 +1,14 @@
 ---
-export interface Props {
-  content: string;
-}
 
-const { content } = Astro.props;
 ---
 
-<p class="paragraph">{content}</p>
+<p class="paragraph">
+  <slot />
+</p>
 
 <style>
-.paragraph {
-  line-height: 1.6;
-  margin-bottom: 1rem;
-}
+  .paragraph {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
 </style>

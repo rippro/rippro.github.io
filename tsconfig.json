@@ -6,10 +6,11 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
+    "strictNullChecks": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "module": "esnext",
+    "module": "es6",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -19,7 +20,7 @@
     "paths": {
       "@assets/*": ["src/assets/*"], 
       "@components/*": ["src/components/*"], 
-      "@contents/*": ["src/contents/*"],
+      "@content/*": ["src/content/*"],
       "@layouts/*": ["src/layouts/*"], 
       "@pages/*": ["src/pages/*"],
       "@styles/*": ["src/styles/*"],
@@ -29,5 +30,8 @@
   },
   "extends": "astro/tsconfigs/strict",
   "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["dist"]
+  "exclude": [
+    "dist",
+    "node_modules"
+  ]
 }
