@@ -16,8 +16,6 @@ export interface ProcessedEvent {
   explanation?: [string, string][]
 }
 const makeEvents = (events: any, urlbase: string): ProcessedEvent[] => {
-  console.log('events')
-  console.log(events[0].rendered)
   return events.map((event: any) => ({
     slug: event.slug,
     url: `/${urlbase}/${event.slug}/`,
@@ -37,9 +35,6 @@ const makeEvents = (events: any, urlbase: string): ProcessedEvent[] => {
 export const getAllEvents = async (): Promise<ProcessedEvent[]> => {
   const eventEvents: ProcessedEvent[] = makeEvents(await getCollection('event'), 'event')
   const processedEvents: ProcessedEvent[] = eventEvents
-  console.log('eventEvents')
-  console.log(processedEvents)
-
   const allEvents = processedEvents
     .filter((event) => !event.tags?.includes('ignorant'))
     .filter((event) => !event.tags?.includes('draft'))

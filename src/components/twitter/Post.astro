@@ -8,18 +8,19 @@ const { url } = Astro.props
 
 const postURL = (() => {
   try {
-    const Url = new URL(url)
+    const Url = new URL(url);
     if (Url.hostname === 'x.com') {
-      return (new URL('https://twitter.com'), Url.pathname).toString()
+      return (new URL(Url.pathname, 'https://twitter.com')).toString();
     }
     if (Url.hostname === 'www.x.com') {
-      return (new URL('https://twitter.com'), Url.pathname).toString()
+      return (new URL(Url.pathname, 'https://twitter.com')).toString();
     }
     return Url.toString()
   } catch {
-    return new URL('https://twitter.com').toString()
+    return new URL('https://twitter.com' ).toString();
   }
-})()
+})();
+
 
 const api = 'https://publish.twitter.com/oembed'
 const uri = new URL(api)
@@ -38,7 +39,7 @@ const tweet = await fetch(uri.toString())
   tweet && (
     <>
       <div>
-        <Tweet id={uri.toString()} data-chrome="noheader nofooter" />
+        <Tweet id={postURL.toString()} data-chrome="noheader nofooter" />
       </div>
     </>
   )
