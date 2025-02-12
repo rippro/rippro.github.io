@@ -1,0 +1,42 @@
+---
+import Layout from '@layouts/Layout.astro'
+import SectionTitle from '@components/SectionTitle.astro'
+import Paragraph from '@components/Paragraph.astro'
+import { getAllEvents } from '@utils/date.ts'
+import type { ProcessedEvent } from '@utils/date.ts'
+
+const events = await getAllEvents()
+---
+
+<Layout title="解説">
+  <div slot="content">
+    <article id="dyn-content">
+      <div>
+        <ul id="events-list">
+          <li>
+            <SectionTitle title="イベント一覧" level={1} />
+          </li>
+          {
+            events.map((event: ProcessedEvent) => (
+              <li>
+                <SectionTitle title={event.data.title} level={2} />
+                <Paragraph>{event.data.description}</Paragraph>
+                <a href={`/event/${event.slug}`}>詳細はこちら</a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </article>
+  </div>
+
+  <style>
+    #events-list {
+      list-style: none;
+      padding: 0;
+      a {
+        color: #007bff;
+      }
+    }
+  </style>
+</Layout>

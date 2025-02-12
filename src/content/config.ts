@@ -5,10 +5,13 @@ const events = defineCollection({
   schema: z.object({
     title: z.string(),
     pubDate: z.date(),
-    description: z.string(),
-    beginDate: z.date(),
-    endDate: z.date(),
-    judge: z.string().url()
+    place: z.string().optional(),
+    description: z.string().optional(),
+    beginDate: z.date().optional(),
+    endDate: z.date().optional(),
+    judge: z.string().url().optional(),
+    problems: z.array(z.tuple([z.string(), z.string().url()])).optional(),
+    explanation: z.array(z.string()).optional()
   })
 })
 

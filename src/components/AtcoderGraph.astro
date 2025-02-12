@@ -25,7 +25,7 @@ const acceptedCounts = usersInfo.map((userInfo: any) => userInfo.acceptedCount)
 const options = {
   chart: {
     //polar: true,
-    type: 'bar',
+    type: 'bar'
   },
   title: {
     text: 'AC Counts'
@@ -65,14 +65,16 @@ const options = {
       borderRadius: 5
     }
   },
-  series: [{
-    name: 'Solved',
-    data: acceptedCounts
-  }],
+  series: [
+    {
+      name: 'Solved',
+      data: acceptedCounts
+    }
+  ],
   credits: {
     enabled: false
   }
-};
+}
 
 /*
 <script is:inline define:vars={{ Highcharts, options }}>
@@ -88,13 +90,12 @@ const options = {
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/modules/data.js"></script>
 <script src="https://code.highcharts.com/maps/modules/exporting.src.js"></script>
-<script define:vars={{options}}>
-//import * as Highcharts from 'Highcharts';
-//import * as Exporting from 'Highcharts/modules/exporting';
-//Exporting(Highcharts);
-//console.log(Highcharts);
-document.addEventListener('DOMContentLoaded', () => {
-  Highcharts.chart('atcoder-chart', options)
-})
+<script define:vars={{ options }}>
+  //import * as Highcharts from 'Highcharts';
+  //import * as Exporting from 'Highcharts/modules/exporting';
+  //Exporting(Highcharts);
+  //console.log(Highcharts);
+  document.addEventListener('DOMContentLoaded', () => {
+    Highcharts.chart('atcoder-chart', options)
+  })
 </script>
-
