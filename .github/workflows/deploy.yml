@@ -32,4 +32,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: darallium/astro-action
+        uses: darallium/astro-action@main
