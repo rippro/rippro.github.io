@@ -18,66 +18,85 @@ interface Props {
   entry: CollectionEntry<'event'>
 }
 
-const { entry } = Astro.props;
+const { entry } = Astro.props
 // ToC作成
 const { Content, headings } = await entry.render()
 headings.unshift({ depth: 0, slug: '目次', text: '目次' })
 ---
 
-<Layout title={entry.title}>
+<Layout title={entry.data.title}>
   <div slot="content">
     <article id="dyn-content">
       <SectionTitle title={entry.data.title} level={1} />
       <SectionTitle title="開催日時" level={2} />
-      { entry.data.beginDate && entry.data.endDate &&
-      <>
-      <Paragraph> {entry.data.beginDate} 〜 {entry.data.endDate} </Paragraph>
-      </>
+      {
+        entry.data.beginDate && entry.data.endDate && (
+          <>
+            <Paragraph>
+              {' '}
+              {entry.data.beginDate} 〜 {entry.data.endDate}{' '}
+            </Paragraph>
+          </>
+        )
       }
-      { entry.data.judge && 
-      <>
-      <SectionTitle title="ジャッジシステム" level={2} />
-      <Paragraph> {entry.data.judge} </Paragraph>
-      </>
+      {
+        entry.data.judge && (
+          <>
+            <SectionTitle title="ジャッジシステム" level={2} />
+            <Paragraph> {entry.data.judge} </Paragraph>
+          </>
+        )
       }
-      { entry.data.description &&
-      <>
-      <SectionTitle title="イベント概要" level={2} />
-      <Paragraph> {entry.data.description} </Paragraph>
-      </>
+      {
+        entry.data.description && (
+          <>
+            <SectionTitle title="イベント概要" level={2} />
+            <Paragraph> {entry.data.description} </Paragraph>
+          </>
+        )
       }
-      { entry.data.place &&
-      <>
-      <SectionTitle title="会場" level={2} />
-      <Paragraph> {entry.data.place} </Paragraph>
-      </>
+      {
+        entry.data.place && (
+          <>
+            <SectionTitle title="会場" level={2} />
+            <Paragraph> {entry.data.place} </Paragraph>
+          </>
+        )
       }
-      { entry.data.problems && (<>
-        <SectionTitle title="問題セット" level={2} />
-        {entry.data.problems.map(([problem, url]) => (
-          <ul>
-            <li>
-              <a href={url}>{problem}</a>
-            </li>
-          </ul>
-        ))}
-      </>)}
-
-      { entry.data.explanation && ( <>
-        <SectionTitle title="解説" level={2} />
-        <table>
-          <tbody> 
-            {entry.data.explanation.map((title, i) => (
-              <tr key={title}> 
-                <td>{`${String.fromCodePoint(i+65)}: ${title}`}</td>
-                <td><a href=`/contestData/${entry.slug}/${String.fromCodePoint(i+65)}.pdf`>pdf</a></td>
-              </tr>
+      {
+        entry.data.problems && (
+          <>
+            <SectionTitle title="問題セット" level={2} />
+            {entry.data.problems.map(([problem, url]) => (
+              <ul>
+                <li>
+                  <a href={url}>{problem}</a>
+                </li>
+              </ul>
             ))}
-          </tbody>
-        </table>
-      </>)}
+          </>
+        )
+      }
 
-      
+      {
+        entry.data.explanation && (
+          <>
+            <SectionTitle title="解説" level={2} />
+            <table>
+              <tbody>
+                {entry.data.explanation.map((title, i) => (
+                  <tr>
+                    <td>{`${String.fromCodePoint(i + 65)}: ${title}`}</td>
+                    <td>
+                      <a href={`/contestData/${entry.slug}/${String.fromCodePoint(i + 65)}.pdf`}>pdf</a>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </>
+        )
+      }
 
       <Content />
     </article>

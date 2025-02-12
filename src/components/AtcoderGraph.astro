@@ -75,26 +75,13 @@ const options = {
     enabled: false
   }
 }
-
-/*
-<script is:inline define:vars={{ Highcharts, options }}>
-  console.log(Highcharts)
-  document.addEventListener('DOMContentLoaded', () => {
-    Highcharts.chart('atcoder-chart', options)
-  })
-</script>
-*/
 ---
 
 <div id="atcoder-chart"></div>
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/modules/data.js"></script>
 <script src="https://code.highcharts.com/maps/modules/exporting.src.js"></script>
-<script define:vars={{ options }}>
-  //import * as Highcharts from 'Highcharts';
-  //import * as Exporting from 'Highcharts/modules/exporting';
-  //Exporting(Highcharts);
-  //console.log(Highcharts);
+<script is:inline define:vars={{ options }}>
   document.addEventListener('DOMContentLoaded', () => {
     Highcharts.chart('atcoder-chart', options)
   })

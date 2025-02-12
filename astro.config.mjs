@@ -13,7 +13,7 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  //site: 'https://rippro.github.io',
+  site: 'https://rippro.github.io',
   integrations: [
     tailwind({
       nesting: true

@@ -41,8 +41,8 @@ export const getAllEvents = async (): Promise<ProcessedEvent[]> => {
   console.log(processedEvents)
 
   const allEvents = processedEvents
-    .filter((event) => !event.tags.includes('ignorant'))
-    .filter((event) => !event.tags.includes('draft'))
+    .filter((event) => !event.tags?.includes('ignorant'))
+    .filter((event) => !event.tags?.includes('draft'))
     .filter((event) => !event.slug.includes('_'))
     .sort((a, b) => b.pubDate.getTime() - a.pubDate.getTime()) // 新しい順でソート
   return allEvents
@@ -51,8 +51,8 @@ export const getAllEvents = async (): Promise<ProcessedEvent[]> => {
 export const getAlleventEvents = async (): Promise<ProcessedEvent[]> => {
   const events = makeEvents(await getCollection('event'), 'event')
   const allEvents = events
-    .filter((event) => !event.tags.includes('ignorant'))
-    .filter((event) => !event.tags.includes('draft'))
+    .filter((event) => !event.tags?.includes('ignorant'))
+    .filter((event) => !event.tags?.includes('draft'))
     .filter((event) => !event.slug.includes('_'))
     .sort((a, b) => b.pubDate.getTime() - a.pubDate.getTime()) // 新しい順でソート
 
