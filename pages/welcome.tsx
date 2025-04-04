@@ -16,9 +16,9 @@ const Welcome: VFC = () => {
   const courseDateStart = new Date(`${currentDate.getFullYear()}/5/11`)
   const courseDateEnd = new Date(`${currentDate.getFullYear()}/7/31`)
   const coueseWeek = ['月', '水']
-  const workshopDate = '2024/4/16(火)'
-  const coursePlace = 'OIC H221教室'
-  const courseTime = '16:20〜17:05'
+  const workshopDate = '2025/4/7(金)'
+  const coursePlace = 'OIC H234教室'
+  const courseTime = '16:40〜18:15'
 
   const isCourceOpen: boolean = courseDateStart < currentDate && currentDate < courseDateEnd
   return (
