@@ -16,11 +16,11 @@ const Navigator: VFC = () => {
           トップ
         </Button>
       </Link>
-      <Link href="/welcome">
+      {/* <Link href="/welcome">
         <Button variant="text" className={`${styles.welcome} ${styles.navibutton}`}>
           新歓情報
         </Button>
-      </Link>
+      </Link> */}
       <Link href="/event">
         <Button variant="text" className={styles.navibutton}>
           解説
