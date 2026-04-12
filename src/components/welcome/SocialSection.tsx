@@ -9,10 +9,9 @@ const socialSectionStyle: CSSProperties = {
 };
 
 const cardStyle: CSSProperties = {
-  border: '1px solid #d1d5db',
-  backgroundColor: '#f8fafc',
-  padding: '14px',
-  borderRadius: '10px'
+  border: '1px solid #d8d5cf',
+  backgroundColor: '#faf9f7',
+  padding: '14px'
 };
 
 const cardTitleStyle: CSSProperties = {
@@ -36,9 +35,8 @@ const linkRowStyle: CSSProperties = {
 const tweetStyle: CSSProperties = {
   marginTop: '10px',
   padding: '10px',
-  borderRadius: '8px',
   backgroundColor: '#ffffff',
-  border: '1px solid #e5e7eb'
+  border: '1px solid #d8d5cf'
 };
 
 function SocialSection() {

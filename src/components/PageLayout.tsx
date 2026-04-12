@@ -73,14 +73,7 @@ const SiteNavigator: FC = () => {
             <Button
               variant="text"
               sx={navButtonSx}
-              className={`
-                !transition-all !duration-200 active:!scale-95
-                ${
-                  isActive
-                    ? '!font-semibold !text-black bg-gray-200'
-                    : '!font-normal !text-gray-600 hover:bg-gray-100 hover:!text-black'
-                }
-              `}
+              className={isActive ? '!font-semibold !text-black' : '!font-normal !text-gray-600 hover:!text-black'}
               aria-current={isActive ? 'page' : undefined}
             >
               {item.label}
@@ -115,7 +108,7 @@ const SiteFooter: FC = () => {
 export const Layout: FC<PageLayoutProps> = ({ children, title, description }) => (
   <div className="min-h-screen px-3 py-8 sm:px-6 sm:py-12 selection:bg-slate-300 selection:text-black">
     <SiteMeta title={title} description={description} />
-    <div className="mx-auto w-full max-w-[920px] rounded-xl bg-white px-5 py-4 pb-12 shadow-2xl ring-1 ring-slate-900/10 sm:px-10 sm:py-8">
+    <div className="mx-auto w-full max-w-[920px] bg-white px-5 py-4 pb-12 shadow ring-1 ring-slate-900/5 sm:px-10 sm:py-8">
       <SiteHeader />
       <main>{children}</main>
       <SiteFooter />
