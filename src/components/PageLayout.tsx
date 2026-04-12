@@ -86,8 +86,8 @@ const SiteNavigator: FC = () => {
 };
 
 const SiteHeader: FC = () => (
-  <header className="mt-3 flex flex-col items-center gap-3 border-b border-slate-300/70 pb-6 lg:flex-row lg:items-end lg:justify-between">
-    <Link href="/" className="transition-opacity hover:opacity-1">
+  <header className="mt-3 flex flex-col items-center gap-3 border-b border-slate-200 pb-6 lg:flex-row lg:items-end lg:justify-between">
+    <Link href="/">
       <img className="w-[180px] object-contain sm:w-[210px]" src="/rippro-rogo.png" alt="rippro-rogo" />
     </Link>
     <nav className="w-full lg:w-auto">
@@ -99,16 +99,16 @@ const SiteHeader: FC = () => (
 const SiteFooter: FC = () => {
   const year = new Date().getFullYear();
   return (
-    <footer className="mt-6 border-t border-gray-200 text-center text-sm tracking-normal text-gray-500">
+    <footer className="mt-8 border-t border-slate-200 pt-4 text-center text-sm tracking-wide text-gray-400">
       <p>&copy; 2005-{year} RiPPro All rights reserved.</p>
     </footer>
   );
 };
 
 export const Layout: FC<PageLayoutProps> = ({ children, title, description }) => (
-  <div className="min-h-screen px-3 py-8 sm:px-6 sm:py-12 selection:bg-slate-300 selection:text-black">
+  <div className="min-h-screen px-3 py-10 sm:px-6 sm:py-14 selection:bg-slate-200 selection:text-black">
     <SiteMeta title={title} description={description} />
-    <div className="mx-auto w-full max-w-[920px] bg-white px-5 py-4 pb-12 shadow ring-1 ring-slate-900/5 sm:px-10 sm:py-8">
+    <div className="mx-auto w-full max-w-[920px] bg-white px-5 py-6 pb-14 shadow-[0_4px_48px_rgba(0,0,0,0.24)] sm:px-10 sm:py-8">
       <SiteHeader />
       <main>{children}</main>
       <SiteFooter />
