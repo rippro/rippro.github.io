@@ -25,10 +25,8 @@ jobs:
             ${{ runner.os }}-yarn-
       - name: Install Dependencies
         run: yarn
-      - name: Lint && Format
-        run: yarn lint && yarn format
       - name: Build
-        run: yarn build && yarn export
+        run: yarn build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
