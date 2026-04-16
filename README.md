@@ -45,7 +45,7 @@ GitHub Actions で Push 時に自動デプロイされます．
 | | |--index.tsx
 | |--index.tsx
 | |--links.tsx
-| |--menbers.tsx
+| |--members.tsx
 | |--welcome.tsx
 |--public
 | |--static
